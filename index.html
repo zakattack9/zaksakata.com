@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Cutive+Mono|Iceland|Josefin+Sans:700|Righteous" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Josefin+Slab|Source+Code+Pro:300" rel="stylesheet">
   <!-- Animate on Scroll CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <!-- Fullpage CSS -->
@@ -14,31 +19,66 @@
   <!-- Local CSS -->
   <link rel="stylesheet" href="./assets/css/main.css">
 
+  <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.png" />
+
   <title>Zak Sakata</title>
 </head>
+
 <body>
 
   <div id="fullpage">
-    <div class="section parallax-window" data-parallax="scroll" data-image-src="./assets/img/test.jpg">
-      
+    <div class="section">
+      <!-- <div data-tilt id="tiltEl" class="container-fluid">
+        <div id="innerTilt">
+          ZAK SAKATA
+          18 year old web developer
+        </div>
+      </div> -->
+
+      <div class="container-fluid" id="animateName">
+        <div id="zCont">
+          <img id="Z2" src="./assets/img/Z2.png">
+          <img id="Z1" src="./assets/img/Z1.png">
+          <img id="A1" src="./assets/img/A1.png">
+        </div>
+
+        <div id="kCont">
+          <img id="K1" src="./assets/img/K1.png">
+          <img id="K2" src="./assets/img/K2.png">
+          <img id="K3" src="./assets/img/K3.png">
+        </div>
+
+      </div>
     </div>
 
     <div class="section">
-      <div class="container-fluid" id="three" data-aos="fade-up"></div>
-      <div class="container-fluid" id="four" data-aos="fade-up"></div>
+      <div class="container-fluid" id="three" data-aos="fade-down" data-aos-delay="600">
+        01
+      </div>
+      <div class="container-fluid" id="five" data-aos="fade-up">
+        About Me
+        <span style="color: #84dcc6">.</span>
+      </div>
+      <div class="container-fluid" id="four" data-aos="slide-right" data-aos-delay="0" data-aos-easing="ease-out">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quasi, repellat, deleniti perspiciatis impedit possimus,
+        temporibus libero quibusdam natus numquam nisi magnam? Molestias eius facilis aliquam debitis, libero ad veniam!
+      </div>
     </div>
 
     <div class="section parallax-window" data-parallax="scroll" data-image-src="./assets/img/test.jpg">
       ????
     </div>
   </div>
-  
+
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="./assets/libs/jquery-3.3.1.min.js"><\/script>');</script>
   <!-- Boostrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
   <!-- Animate on Scroll JS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <!-- 3D Parallax (mouse activated)-->
@@ -53,4 +93,5 @@
   <!-- Local JS -->
   <script src='./assets/js/main.js'></script>
 </body>
+
 </html>

@@ -1,13 +1,131 @@
+@font-face {
+  font-family: Techy;
+  src: url(../fonts/Techy.woff);
+}
+
+@font-face {
+  font-family: Krungthep;
+  src: url(../fonts/Krungthep.woff);
+}
+
+/*
+font-family: 'Cutive Mono', monospace;
+font-family: 'Iceland', cursive;
+font-family: 'Righteous', cursive;
+ */
+
 html, body {
   height: 100%;
 }
 
 #fp-nav ul li a span { /*edits the navigation bar for fullpage*/
-  background: white;
+  background: darkslategrey;
 }
 
-#three, #four {
+#three {
+  font-family: techy;
+  font-size: 70px;
+  padding-left: 35px;
+  color: #73a2adff;
+  margin-top: 20vh;
+}
+
+#five {
+  font-family: 'Righteous', cursive;
+  font-weight: bold;
+  font-size: 80px;
+  padding-left: 35px;
+  box-sizing: border-box;
+  color: rgb(52, 54, 75);
+  margin-bottom: 40px;
+}
+
+#four {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-size: 19px;
+  padding: 35px;
+  color: rgb(43, 45, 63);
+}
+
+#fullpage { /*disables horizontal scrollbar from appearing when using any parallax effect*/
+  overflow-x: hidden;
+}
+#tiltEl {
   background-color: red;
-  height: 200px;
-  border: 5px white solid;
+  transform-style: preserve-3d;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+}
+
+#innerTilt {
+  /* transform: translateZ(-100px); */
+  font-family: Techy;
+  transform: translateZ(90px);
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  /* color: black; */
+  color: gray;
+  font-size: 30px;
+}
+
+#animateName {
+  background-color: lightgray;
+  height: 50%;
+}
+
+#zCont, #kCont {
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+}
+
+#zCont {
+  right: 50%;
+}
+
+#kCont {
+  left: 50%;
+}
+
+#Z1, #Z2, #A1, #K1, #K2, #K3 {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#Z1 {
+  width: 100%;
+}
+
+#Z2 {
+  width: 62%;
+}
+
+#A1 {
+  width: 15%;
+  right: 10%;
+  top: 35%;
+}
+
+#K1 {
+  height: 100%;
+}
+
+#K2 {
+  width: 74%;
+  right: 0;
+}
+
+#K3 {
+  width: 74%;
+  right: 0;
+  bottom: 0;
 }
