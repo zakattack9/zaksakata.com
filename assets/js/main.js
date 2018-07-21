@@ -32,9 +32,10 @@ $(document).ready(() => {
     anchorPlacement: 'top-bottom',
   });
 
-  $('#tiltEl').tilt({
+  $('#animateName').tilt({
     glare: true,
     maxGlare: 0.5, //determines how bright the glare is
     scale: 1.05 //scales tilt element
   })
+  
 });

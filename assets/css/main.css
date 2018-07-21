@@ -19,7 +19,7 @@ html, body {
 }
 
 #fp-nav ul li a span { /*edits the navigation bar for fullpage*/
-  background: darkslategrey;
+  background: rgb(52, 54, 75);
 }
 
 #three {
@@ -76,8 +76,9 @@ html, body {
 }
 
 #animateName {
-  background-color: lightgray;
+  background-color: white;
   height: 50%;
+  overflow: hidden;
 }
 
 #zCont, #kCont {
@@ -92,7 +93,7 @@ html, body {
 }
 
 #kCont {
-  left: 50%;
+  left: 49.9%;
 }
 
 #Z1, #Z2, #A1, #K1, #K2, #K3 {
@@ -103,29 +104,155 @@ html, body {
 
 #Z1 {
   width: 100%;
+  animation: Z1 1.5s ease 0.5s normal both;
+  z-index: 1;
 }
 
 #Z2 {
   width: 62%;
+  animation: Z2 1.5s ease-out 2.5s normal both;
 }
 
 #A1 {
   width: 15%;
   right: 10%;
   top: 35%;
+  animation: A1 1s ease 3.4s normal both;
+  z-index: 0;
 }
 
 #K1 {
   height: 100%;
+  animation: K1 1.5s ease 0.5s normal both;
 }
 
 #K2 {
   width: 74%;
   right: 0;
+  animation: K2 1.2s ease 1.6s normal both;
+  z-index: 1;
 }
 
 #K3 {
   width: 74%;
   right: 0;
   bottom: 0;
+  animation: K3 1s ease 2.5s normal both;
+  z-index: 0;
 }
+
+/* Main Page Load Animation */
+/* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+@keyframes Z1 {
+  0% {
+    opacity: 0;
+    bottom: -30%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes Z2 {
+  0% {
+    opacity: 0;
+    left: 62%;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+
+  }
+}
+
+@keyframes A1 {
+  0% {
+    opacity: 0;
+    top: 74%;
+  }
+  100% {
+    opacity: 1;
+    top: 35%;
+  }
+}
+
+@keyframes K1 {
+  0% {
+    opacity: 0;
+    bottom: 30%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0%;
+  }
+}
+
+@keyframes K2 {
+  0% {
+    opacity: 0;
+    right: -30%;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes K3 {
+  0% {
+    opacity: 0;
+    bottom: -30%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+/*Shine Effect (http://jsfiddle.net/nqQc7/4154/)*/
+#animateName:after {
+  animation: shine 7s ease-in 4.1s none;
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  z-index: 0;
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+@keyframes shine{
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+  }
+}
+
