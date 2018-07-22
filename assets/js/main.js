@@ -33,16 +33,26 @@ $(document).ready(() => {
   });
 
   $('#animateName').tilt({
-    glare: true,
-    maxGlare: 0.5, //determines how bright the glare is
+    //glare: true,
+    //maxGlare: 0.5, //determines how bright the glare is
     scale: 1.05, //scales tilt element
   })
 
+  //Starts 3D parallax scene
+  var scene = document.getElementById('shortBlurbSub');
+  var parallaxInstance = new Parallax(scene);
+
+  var scene2 = document.getElementById('shortBlurb');
+  var parallaxInstance2 = new Parallax(scene2);
+  parallaxInstance2.friction(0.9, 0.9);
+  parallaxInstance2.scalar(12, 10);
 });
 
 $('#menuBtn').on('click', () => {
   if($('#overlay').height() === 0){
     $('#overlay')[0].style.height = '400px';
+
+    $('#fp-nav')[0].style.display = 'none';
 
     $('#hr2').css({
       "width": "30px",
@@ -61,14 +71,10 @@ $('#menuBtn').on('click', () => {
       "transition": "0.2s",
     })
 
-    $('#menuBtn').css({
-      "top": "3.2%",
-      "right": "1.2%",
-      "height": "55px",
-      "transition": "0.2s",
-    })
   } else {
     $('#overlay')[0].style.height = '0';
+
+    $('#fp-nav')[0].style.display = 'block';
 
     $('#hr2').css({
       "width": "40px",
@@ -84,11 +90,5 @@ $('#menuBtn').on('click', () => {
       "margin-bottom": "",
     })
 
-    $('#menuBtn').css({
-      "top": "4%",
-      "right": "1%",
-      "height": "40px",
-      "transition": "0.2s",
-    })
   }
 })

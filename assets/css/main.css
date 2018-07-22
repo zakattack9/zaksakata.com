@@ -12,6 +12,7 @@
 font-family: 'Cutive Mono', monospace;
 font-family: 'Iceland', cursive;
 font-family: 'Righteous', cursive;
+font-family: "Helvetica Neue", sans-serif;
  */
 
 html, body {
@@ -24,11 +25,15 @@ html, body {
 }
 
 #fp-nav ul li a span { /*edits the navigation bar for fullpage*/
-  background: rgb(52, 54, 75);
+  background: rgb(95, 98, 128);
 }
 
 #fullpage { /*disables horizontal scrollbar from appearing when using any parallax effect*/
   overflow-x: hidden;
+}
+
+#main, #about {
+  background-color: rgb(241, 240, 233);
 }
 
 /* #tiltEl {
@@ -58,15 +63,15 @@ html, body {
   height: 0;
   width: 100%;
   z-index: 9;
-  background-color: white;
+  background-color: rgb(241, 240, 233);
   transition: 0.4s;
   transition-timing-function: ease;
 }
 
 #menuBtn {
   position: absolute;
-  top: 4%;
-  right: 1%;
+  top: 3.3%;
+  right: 0.8%;
   width: 70px;
   height: 40px;
   z-index: 10;
@@ -96,35 +101,16 @@ html, body {
   width: 20px;
 }
 
-#menuBtn:hover {
-  top: 3.2%;
-  right: 1.2%;
-  height: 55px;
-  transition: 0.2s;
-}
-
 #menuBtn:hover #hr1 {
   border-top: 3px white solid;
   transition: 0.2s;
   margin-bottom: -4px;
 }
 
-/* #menuBtn:hover #hr3 {
-  width: 30px;
-  transform: rotate(90deg);
-  transition: 0.2s;
-}
-
-#menuBtn:hover #hr2 {
-  width: 30px;
-  transition: 0.2s;
-  margin-bottom: -4px;
-} */
-
 #cutCorner {
   height: 95%;
   width: 97%;
-  border: 10px rgb(52, 54, 75) solid;
+  border: 7px rgb(52, 54, 75) solid;
   pointer-events:none;
   display: inline-block;
   position: absolute;
@@ -147,15 +133,43 @@ html, body {
 
 #cutCorner:after {
   position: absolute;
-  right: -10px;
-  top: -10px;
+  right: -8px;
+  top: -8px;
   content:'';
-  border-top: 70px solid white;
+  border-top: 70px solid rgb(241, 240, 233);
   border-left: 70px solid transparent;
 }
 
-#animateName {
+#shortBlurb {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 400;
+  font-family: "Helvetica Neue", sans-serif;
+  animation: fadeDownTxt 1.5s ease 3.5s normal both;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  color: rgb(58, 60, 83);
+  position: absolute;
+  top: 13%;
+}
 
+#shortBlurbSub {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  font-family: "Helvetica Neue", sans-serif;
+  animation: fadeUpTxt 1.5s ease 3.5s normal both;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: rgb(92, 94, 124);
+  /* font-style: italic; */
+  position: absolute;
+  bottom: 12%;
+}
+
+#animateName {
   height: 50%;
   overflow: hidden;
 }
@@ -220,121 +234,6 @@ html, body {
   z-index: 0;
 }
 
-/* Main Page Load Animation */
-/* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
-@keyframes Z1 {
-  0% {
-    opacity: 0;
-    bottom: -30%;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-
-@keyframes Z2 {
-  0% {
-    opacity: 0;
-    left: 62%;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-
-  }
-}
-
-@keyframes A1 {
-  0% {
-    opacity: 0;
-    top: 74%;
-  }
-  100% {
-    opacity: 1;
-    top: 35%;
-  }
-}
-
-@keyframes K1 {
-  0% {
-    opacity: 0;
-    bottom: 30%;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0%;
-  }
-}
-
-@keyframes K2 {
-  0% {
-    opacity: 0;
-    right: -30%;
-  }
-  35% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    right: 0;
-  }
-}
-
-@keyframes K3 {
-  0% {
-    opacity: 0;
-    bottom: -30%;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-
-/*Shine Effect (http://jsfiddle.net/nqQc7/4154/)*/
-#animateName:after {
-  animation: shine 7s ease-in 4.1s none;
-  content: "";
-  position: absolute;
-  top: -110%;
-  left: -210%;
-  width: 200%;
-  height: 200%;
-  opacity: 0;
-  transform: rotate(30deg);
-  z-index: 0;
-  
-  background: rgba(255, 255, 255, 0.13);
-  background: linear-gradient(
-    to right, 
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0.0) 100%
-  );
-}
-
-@keyframes shine{
-  10% {
-    opacity: 1;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
-  }
-  100% {
-    opacity: 0;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
-  }
-}
-
 #three {
   font-family: techy;
   font-size: 70px;
@@ -354,10 +253,10 @@ html, body {
 }
 
 #four {
-  font-family: 'Cutive Mono', monospace;
-  font-weight: 500;
-  letter-spacing: -1px;
-  font-size: 19px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 17px;
   padding: 35px;
   color: rgb(43, 45, 63);
 }
