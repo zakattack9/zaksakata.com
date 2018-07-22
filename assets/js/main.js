@@ -3,16 +3,25 @@ $(document).ready(() => {
     licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 
     autoScrolling: true,
-    scrollHorizontally: true,
     navigation: true,
     navigationPosition: "right",
     easingcss3: "ease-in",
     scrollBar: true,
     touchSensitivity: 1,
 
+    onLeave: function (origin, destination, direction) { //fades menu tab in and out
+      if (direction == 'down' || 'up') {
+        $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+        if (origin.index == 0 && direction == 'down') {
+          $('#zCont')[0].style.right = "57%";
+          $('#kCont')[0].style.left = "57%";
+        }else if (origin.index == 1 && direction == 'up') {
+          $('#zCont')[0].style.right = "50%";
+          $('#kCont')[0].style.left = "49.9%";
+        }
+      }
+    }
   });
-
-  //methods
 
   AOS.init({
     // Global settings
@@ -39,18 +48,23 @@ $(document).ready(() => {
   })
 
   //Starts 3D parallax scene
-  var scene = document.getElementById('shortBlurbSub');
-  var parallaxInstance = new Parallax(scene);
-
   var scene2 = document.getElementById('shortBlurb');
   var parallaxInstance2 = new Parallax(scene2);
   parallaxInstance2.friction(0.9, 0.9);
-  parallaxInstance2.scalar(12, 10);
+  parallaxInstance2.scalar(15, 10);
+
+  var scene = document.getElementById('shortBlurbSub');
+  var parallaxInstance = new Parallax(scene);
+  parallaxInstance.friction(0.1, 0.1);
+
 });
 
+//opens and closes overlay
 $('#menuBtn').on('click', () => {
-  if($('#overlay').height() === 0){
+  if ($('#overlay').height() === 0) {
     $('#overlay')[0].style.height = '400px';
+    $('#darken')[0].style.display = "block";
+    $('#darken').fadeTo(400, 0.7);
 
     $('#fp-nav')[0].style.display = 'none';
 
@@ -73,6 +87,9 @@ $('#menuBtn').on('click', () => {
 
   } else {
     $('#overlay')[0].style.height = '0';
+    $('#darken').fadeTo(400, 0, () => {
+      $('#darken')[0].style.display = "none";
+    });
 
     $('#fp-nav')[0].style.display = 'block';
 
@@ -91,4 +108,8 @@ $('#menuBtn').on('click', () => {
     })
 
   }
+})
+
+$('#downArrow').on('click', () => {
+  fullpage_api.moveTo(2);
 })

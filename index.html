@@ -11,7 +11,6 @@
     crossorigin="anonymous">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Cutive+Mono|Iceland|Josefin+Sans:700|Righteous" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <!-- Animate on Scroll CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <!-- Fullpage CSS -->
@@ -27,8 +26,6 @@
 
 <body>
 
-
-
   <div id="fullpage">
     <div class="section" id="main">
       <div id="menuBtn">
@@ -41,14 +38,27 @@
 
       </div>
 
+      <div id="darken">
+        
+      </div>
+
+      <div id="downArrow">
+        <hr id="arrow1">
+        <hr id="arrow2">
+      </div>
+
       <div id="cutCorner">
         <div id="shortBlurb">
-            <div data-depth="0.03">Web Developer ~ UI / UX Design</div>
+          <div data-depth="0.03">Web Developer ~ UI / UX Design</div>
         </div>
 
         <div id="shortBlurbSub">
-          <div data-depth="0.09">Producing <span style="font-weight: 400">quality</span> with <span style="font-weight: 400">passion</span></div>
+          <div data-depth="0.09">Producing
+            <span style="font-weight: 400">quality</span> with
+            <span style="font-weight: 400">passion</span>
+          </div>
         </div>
+
       </div>
 
       <div data-tilt class="container-fluid" id="animateName">
@@ -67,18 +77,25 @@
 
     </div>
 
-    <div class="section">
-      <div class="container-fluid" id="three" data-aos="fade-down" data-aos-delay="600">
+    <div class="section" id="about">
+      <div class="container-fluid pageNum" data-aos="fade-down" data-aos-delay="600">
         01
       </div>
-      <div class="container-fluid" id="five" data-aos="fade-up">
-        About Me
-        <span style="color: #84dcc6">.</span>
+      <div class="container-fluid title" data-aos="fade-up">
+        About Me<span style="color: #84dcc6">.</span>
+      </div>
+      <div class="container-fluid" id="subTitle1" data-aos="fade-up">
+        Hello I'm Zak. Welcome!
       </div>
       <div class="container-fluid" id="four" data-aos="slide-right" data-aos-delay="0" data-aos-easing="ease-out">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quasi, repellat, deleniti perspiciatis impedit possimus,
         temporibus libero quibusdam natus numquam nisi magnam? Molestias eius facilis aliquam debitis, libero ad veniam!
       </div>
+      <img src="./assets/img/profile.jpg" id="profileImg">
+    </div>
+
+    <div class="section">
+
     </div>
 
     <div class="section parallax-window" data-parallax="scroll" data-image-src="./assets/img/test.jpg">
