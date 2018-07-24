@@ -32,7 +32,7 @@ html, body {
   overflow-x: hidden;
 }
 
-#main, #about {
+#main, #about, .section {
   background-color: rgb(241, 240, 233);
 }
 
@@ -115,7 +115,7 @@ html, body {
 }
 
 #menuBtn:hover #hr1 {
-  border-top: 3px white solid;
+  opacity: 0;
   transition: 0.2s;
   margin-bottom: -4px;
 }
@@ -289,6 +289,30 @@ html, body {
   z-index: 0;
 }
 
+#half {
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  right: 30%;
+  bottom: 0;
+  background-color: #84dcc6;
+}
+
+#upperTri {
+  position: absolute;
+  right: -15%;
+  top: 0;
+  width: 45%;
+}
+
+#lowerTri {
+  position: absolute;
+  right: -15%;
+  bottom: 0;
+  width: 45%;
+}
+}
+
 .pageNum {
   font-family: techy;
   font-size: 70px;
@@ -300,8 +324,8 @@ html, body {
 .title {
   font-family: 'Righteous', cursive;
   font-weight: bold;
-  font-size: 80px;
-  padding-left: 35px;
+  font-size: 5em;
+  line-height: 1.5em;
   box-sizing: border-box;
   color: rgb(52, 54, 75);
 }
@@ -309,10 +333,9 @@ html, body {
 #subTitle1 {
   font-family: 'Righteous', cursive;
   font-weight: 100;
-  font-size: 50px;
-  padding-left: 35px;
-  box-sizing: border-box;
+  font-size: 3em;
   color: rgb(89, 91, 119);
+  line-height: 1.2em;
 }
 
 #four {
@@ -320,15 +343,11 @@ html, body {
   font-weight: 300;
   letter-spacing: 2px;
   font-size: 17px;
-  padding: 35px;
   color: rgb(43, 45, 63);
 }
 
 #profileImg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
+  width: 250px;
   display: block;
   border-radius: 50%;
 }

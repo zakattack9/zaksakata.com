@@ -10,15 +10,14 @@ $(document).ready(() => {
     touchSensitivity: 1,
 
     onLeave: function (origin, destination, direction) { //fades menu tab in and out
-      if (direction == 'down' || 'up') {
+      if (origin.index == 0 && direction == 'down') {
         $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
-        if (origin.index == 0 && direction == 'down') {
-          $('#zCont')[0].style.right = "57%";
-          $('#kCont')[0].style.left = "57%";
-        }else if (origin.index == 1 && direction == 'up') {
-          $('#zCont')[0].style.right = "50%";
-          $('#kCont')[0].style.left = "49.9%";
-        }
+        $('#zCont')[0].style.right = "57%";
+        $('#kCont')[0].style.left = "57%";
+      } else if (origin.index == 1 && direction == 'up') {
+        $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+        $('#zCont')[0].style.right = "50%";
+        $('#kCont')[0].style.left = "49.9%";
       }
     }
   });
