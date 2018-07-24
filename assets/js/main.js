@@ -2,6 +2,9 @@ $(document).ready(() => {
   $('#fullpage').fullpage({
     licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 
+    menu: '#overlayOptions',
+    anchors: ['home', 'about', 'skills'],
+
     autoScrolling: true,
     navigation: true,
     navigationPosition: "right",
@@ -56,12 +59,24 @@ $(document).ready(() => {
   var parallaxInstance = new Parallax(scene);
   parallaxInstance.friction(0.1, 0.1);
 
+  var layerScene = document.getElementById('layerScene');
+  var parallaxInstance3 = new Parallax(layerScene);
+  parallaxInstance3.limit(false, 0);
+  parallaxInstance3.invert(false, true);
+  parallaxInstance3.scalar(5, 0);
+  parallaxInstance3.friction(0.3, 0.3);
+
+  var imageScene = document.getElementById('imgParallax');
+  var parallaxInstance4 = new Parallax(imageScene);
+  parallaxInstance4.friction(0.1, 0.1);
+
 });
 
 //opens and closes overlay
 $('#menuBtn').on('click', () => {
   if ($('#overlay').height() === 0) {
     $('#overlay')[0].style.height = '400px';
+    $('#overlayImg')[0].style.opacity = '1';
     $('#darken')[0].style.display = "block";
     $('#darken').fadeTo(400, 0.7);
 
@@ -86,6 +101,7 @@ $('#menuBtn').on('click', () => {
 
   } else {
     $('#overlay')[0].style.height = '0';
+    $('#overlayImg')[0].style.opacity = '0';
     $('#darken').fadeTo(400, 0, () => {
       $('#darken')[0].style.display = "none";
     });

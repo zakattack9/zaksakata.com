@@ -25,21 +25,45 @@
 </head>
 
 <body>
+  <div id="overlay">
+    <img src="./assets/img/favicon.png" id="overlayImg">
+
+    <!-- Add blog / work experience / timeline -->
+    <ul id="overlayOptions">
+      <li data-menuanchor="home" id="homeOpt">
+        <a href="#home">Home</a>
+      </li>
+      <li data-menuanchor="about" id="aboutOpt">
+        <a href="#about">About</a>
+      </li>
+      <li data-menuanchor="skills" id="skillsOpt">
+        <a href="#skills">Skills</a>
+      </li>
+      <li id="projectsOpt">
+          <a href="#projects">Projects</a>
+      </li>
+      <li id="hacksOpt">
+          <a href="#hackathons">Hackathons</a>
+      </li>
+      <li id="photographyOpt">
+          <a href="#photography">Photography</a>
+      </li>
+      <li id="contactOpt">
+          <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="darken">
+
+  </div>
 
   <div id="fullpage">
-    <div class="section" id="main">
+    <div class="section">
       <div id="menuBtn">
         <hr id="hr1">
         <hr id="hr2">
         <hr id="hr3">
-      </div>
-
-      <div id="overlay">
-
-      </div>
-
-      <div id="darken">
-
       </div>
 
       <div id="downArrow">
@@ -77,10 +101,19 @@
 
     </div>
 
-    <div class="section" id="about">
-      <div id="half"></div>
-      <img id="upperTri" src="./assets/img/K2.png">
-      <img id="lowerTri" src="./assets/img/K3.png">
+    <div class="section">
+      <div id="layerScene">
+        <div id="layer" data-depth="0.07">
+          <div id="layerInner">
+
+          </div>
+        </div>
+        <div id="layer1" data-depth="0.15">
+          <div id="layer1Inner">
+
+          </div>
+        </div>
+      </div>
       <!-- <div class="container-fluid pageNum" data-aos="fade-down" data-aos-delay="600">
         01
       </div>
@@ -115,16 +148,18 @@
               <div class="w-100"></div>
 
               <div class="col-sm" id="four" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-out">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quasi, repellat, deleniti perspiciatis impedit possimus,
-                  temporibus libero quibusdam natus numquam nisi magnam? Molestias eius facilis aliquam debitis, libero ad
-                  veniam!
-                </div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quasi, repellat, deleniti perspiciatis impedit possimus,
+                temporibus libero quibusdam natus numquam nisi magnam? Molestias eius facilis aliquam debitis, libero ad
+                veniam!
+              </div>
             </div>
 
           </div>
 
           <div class="col-md-5 col-sm-3 align-self-center" data-aos="fade-left" data-aos-delay="450">
-              <img class="offset-md-1" data-src="./assets/img/profile.jpg" id="profileImg" >
+            <div id="imgParallax">
+              <img data-depth="0.09" class="offset-md-1" data-src="./assets/img/profile.jpg" id="profileImg">
+            </div>
           </div>
         </div>
       </div>
@@ -134,9 +169,9 @@
 
     </div>
 
-    <div class="section parallax-window" data-parallax="scroll" data-image-src="./assets/img/test.jpg">
+    <!-- <div class="section parallax-window" data-parallax="scroll" data-image-src="./assets/img/test.jpg">
 
-    </div>
+    </div> -->
   </div>
 
   <!-- jQuery -->
