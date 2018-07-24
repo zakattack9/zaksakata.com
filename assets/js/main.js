@@ -2,9 +2,6 @@ $(document).ready(() => {
   $('#fullpage').fullpage({
     licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 
-    menu: '#overlayOptions',
-    anchors: ['home', 'about', 'skills'],
-
     autoScrolling: true,
     navigation: true,
     navigationPosition: "right",
@@ -73,6 +70,30 @@ $(document).ready(() => {
 });
 
 //opens and closes overlay
+function closeOverlay() {
+  $('#overlay')[0].style.height = '0';
+  $('#overlayImg')[0].style.opacity = '0';
+  $('#darken').fadeTo(400, 0, () => {
+    $('#darken')[0].style.display = "none";
+  });
+
+  $('#fp-nav')[0].style.display = 'block';
+
+  $('#hr2').css({
+    "width": "40px",
+    "transform": "rotate(0deg)",
+    "margin-bottom": "5px",
+  })
+
+  $('#hr3').css({
+    "width": "60px",
+  })
+
+  $('#hr1').css({
+    "margin-bottom": "",
+  })
+}
+
 $('#menuBtn').on('click', () => {
   if ($('#overlay').height() === 0) {
     $('#overlay')[0].style.height = '400px';
@@ -100,31 +121,32 @@ $('#menuBtn').on('click', () => {
     })
 
   } else {
-    $('#overlay')[0].style.height = '0';
-    $('#overlayImg')[0].style.opacity = '0';
-    $('#darken').fadeTo(400, 0, () => {
-      $('#darken')[0].style.display = "none";
-    });
-
-    $('#fp-nav')[0].style.display = 'block';
-
-    $('#hr2').css({
-      "width": "40px",
-      "transform": "rotate(0deg)",
-      "margin-bottom": "5px",
-    })
-
-    $('#hr3').css({
-      "width": "60px",
-    })
-
-    $('#hr1').css({
-      "margin-bottom": "",
-    })
-
+    closeOverlay();
   }
+})
+
+//Overlay navigation functionality
+$('#darken').on('click', () => { //closes overlay if user clicks outside of overlay
+  closeOverlay();
 })
 
 $('#downArrow').on('click', () => {
   fullpage_api.moveTo(2);
+})
+
+$('#homeOpt').on('click', () => {
+  fullpage_api.moveTo(1);
+  $('#zCont')[0].style.right = "50%";
+  $('#kCont')[0].style.left = "49.9%";
+  closeOverlay();
+})
+
+$('#aboutOpt').on('click', () => {
+  fullpage_api.moveTo(2);
+  closeOverlay();
+})
+
+$('#skillsOpt').on('click', () => {
+  fullpage_api.moveTo(3);
+  closeOverlay();
 })
