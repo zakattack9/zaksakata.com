@@ -46,16 +46,17 @@ $(document).ready(() => {
     scale: 1.05, //scales tilt element
   })
 
-  //Starts 3D parallax scene
-  var scene2 = document.getElementById('shortBlurb');
-  var parallaxInstance2 = new Parallax(scene2);
-  parallaxInstance2.friction(0.9, 0.9);
-  parallaxInstance2.scalar(15, 10);
-
-  var scene = document.getElementById('shortBlurbSub');
+  //Parallax Scenes for Main Page
+  var scene = document.getElementById('shortBlurb');
   var parallaxInstance = new Parallax(scene);
-  parallaxInstance.friction(0.1, 0.1);
+  parallaxInstance.friction(0.9, 0.9);
+  parallaxInstance.scalar(15, 10);
 
+  var scene2 = document.getElementById('shortBlurbSub');
+  var parallaxInstance2 = new Parallax(scene2);
+  parallaxInstance2.friction(0.1, 0.1);
+
+  //Parallax Scenes for About Section
   var layerScene = document.getElementById('layerScene');
   var parallaxInstance3 = new Parallax(layerScene);
   parallaxInstance3.limit(false, 0);
@@ -66,6 +67,22 @@ $(document).ready(() => {
   var imageScene = document.getElementById('imgParallax');
   var parallaxInstance4 = new Parallax(imageScene);
   parallaxInstance4.friction(0.1, 0.1);
+
+  var aboutTextPlx = document.getElementById('aboutTextPlx');
+  var parallaxInstance5 = new Parallax(aboutTextPlx);
+
+  //Parallax Scenes for Skills Section
+  var skillsParallax = document.getElementById('skillsParallax');
+  var parallaxInstance6 = new Parallax(skillsParallax);
+
+  var skillsParallax2 = document.getElementById('skillsParallax2');
+  var parallaxInstance7 = new Parallax(skillsParallax2);
+
+  var skillCardsPlx = document.getElementById('skillCardsPlx');
+  var parallaxInstance8 = new Parallax(skillCardsPlx);
+
+  var newSkillsPlx = document.getElementById('newSkillsPlx');
+  var parallaxInstance9 = new Parallax(newSkillsPlx);
 
 });
 
