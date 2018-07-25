@@ -174,7 +174,7 @@ $('#projectsOpt').on('click', () => {
   closeOverlay();
 })
 
-$('#hacksOpt').on('click', () => {
+$('#workOpt').on('click', () => {
   fullpage_api.moveTo(5);
   closeOverlay();
 })
