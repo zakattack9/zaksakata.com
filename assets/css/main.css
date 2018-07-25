@@ -464,8 +464,9 @@ html, body {
 #subTitle2 {
   font-family: 'Righteous', cursive;
   font-weight: 100;
-  font-size: 2em;
+  font-size: 1.7em;
   color: rgb(89, 91, 119);
-  line-height: 1.5em;
+  line-height: 1.2em;
   text-align: right;
+  text-transform: uppercase;
 }
