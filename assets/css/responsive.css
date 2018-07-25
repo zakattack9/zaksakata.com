@@ -3,6 +3,11 @@ Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap
 */
 
+/* Smartphone Portrait Mode */
+@media (min-width: 0px) {
+
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 

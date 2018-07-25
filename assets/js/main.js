@@ -8,6 +8,7 @@ $(document).ready(() => {
     easingcss3: "ease-in",
     scrollBar: true,
     touchSensitivity: 1,
+    // scrollOverflow: true,
 
     onLeave: function (origin, destination, direction) { //fades menu tab in and out
       if (origin.index == 0 && direction == 'down') {
@@ -142,7 +143,7 @@ $('#menuBtn').on('click', () => {
   }
 })
 
-//Overlay navigation functionality
+//Overlay navigation functionality (prevents slides from being added to history)
 $('#darken').on('click', () => { //closes overlay if user clicks outside of overlay
   closeOverlay();
 })
@@ -165,5 +166,25 @@ $('#aboutOpt').on('click', () => {
 
 $('#skillsOpt').on('click', () => {
   fullpage_api.moveTo(3);
+  closeOverlay();
+})
+
+$('#projectsOpt').on('click', () => {
+  fullpage_api.moveTo(4);
+  closeOverlay();
+})
+
+$('#hacksOpt').on('click', () => {
+  fullpage_api.moveTo(5);
+  closeOverlay();
+})
+
+$('#photographyOpt').on('click', () => {
+  fullpage_api.moveTo(6);
+  closeOverlay();
+})
+
+$('#contactOpt').on('click', () => {
+  fullpage_api.moveTo(7);
   closeOverlay();
 })

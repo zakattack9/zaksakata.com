@@ -77,6 +77,7 @@ html, body {
   width: 30px;
   margin-bottom: 55px;
   transition: 1s;
+  opacity: 0;
 }
 
 #overlayOptions {
@@ -470,4 +471,37 @@ html, body {
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* PROJECTS SECTION */
+#projectsTitle {
+  font-size: 4em;
+}
+
+.projectImg {
+  border: 4px rgb(89, 91, 119) solid;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  top: 0;
+  transition-timing-function: ease-out;
+  transition: 0.25s;
+}
+
+.projectImg:hover {
+  top: -5%;
+}
+
+.projectCol {
+  /* height: 100px; */
+}
+
+#overlapRow {
+  position: relative;
+  top: -100px;
+}
+
+#fixWrap {
+  height: 85vh;
 }
