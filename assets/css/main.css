@@ -361,11 +361,11 @@ html, body {
   bottom: 0;
   left: 0;
   font-size: 2em;
-  color: #73a2adff;
+  color: #73a2ad;
   transform: rotate(90deg);
 }
 
-.title {
+.title { /*standard for all titles*/
   font-family: 'Righteous', cursive;
   font-weight: bold;
   font-size: 5em;
@@ -382,7 +382,7 @@ html, body {
   line-height: 1.2em;
 }
 
-#aboutMe {
+.description { /*standard for all descriptions*/
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
@@ -395,4 +395,77 @@ html, body {
   display: block;
   border-radius: 50%;
   border: 20px #84dcc6 solid;
+}
+
+/* SKILLS AND EXPERIENCES SECTION */
+
+.skillsList {
+  text-align: center;
+}
+
+.iconSize {
+  font-size: 3em;
+  color: rgb(52, 54, 75);
+}
+
+#adobeLogo {
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+  width: 4em;
+  filter: brightness(75%);
+}
+
+.iconWrap {
+  /* width: 185px; */
+  width: 90%;
+  margin: 0 auto;
+  border: 4px #73a2ad solid;
+  padding-bottom: 20px; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.newSkill {
+  border: 4px #7eccb9 solid;
+  border-radius: 10px;
+}
+
+.skillTitle {
+  font-size: 1.2vw;
+  font-family: 'Righteous', cursive;
+  color: rgb(52, 54, 75);
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.subList {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  background-color: #73a2ad;
+  /* width: 185px; */
+  width: 90%;
+  display: block;
+  padding-left: 0;
+  margin: 0 auto;
+  color: white;
+  text-align: left;
+  padding: 10% 11.5%;
+  letter-spacing: 2px;
+  margin-bottom: 10%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.subList li {
+  list-style: none;
+}
+
+#subTitle2 {
+  font-family: 'Righteous', cursive;
+  font-weight: 100;
+  font-size: 2em;
+  color: rgb(89, 91, 119);
+  line-height: 1.5em;
+  text-align: right;
 }
