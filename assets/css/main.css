@@ -607,11 +607,11 @@ html, body {
   height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   z-index: 11;
   background-color: rgb(241, 240, 233);
   overflow: hidden;
-  transition: 0.55s;
+  transition: 0.6s;
 }
 
 #closeOpenPrj {
