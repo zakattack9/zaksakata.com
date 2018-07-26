@@ -387,7 +387,8 @@ html, body {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
-  font-size: 17px;
+  /* font-size: 17px; */
+  font-size: 1.08em;
   color: rgb(43, 45, 63);
 }
 
@@ -479,29 +480,123 @@ html, body {
 }
 
 .projectImg {
-  border: 4px rgb(89, 91, 119) solid;
+  /* border: 4px rgb(89, 91, 119) solid; */
   display: block;
-  margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative;
   top: 0;
   transition-timing-function: ease-out;
-  transition: 0.25s;
+  transition: 0.3s;
+  width: 80%;
+  opacity: 1;
+  z-index: 1;
 }
 
-.projectImg:hover {
-  top: -5%;
+/* .projectImg:hover {
+  top: -3%;
+  opacity: 1;
+} */
+
+/* #fixWrap {
+  height: 60vh;
+} */
+
+#prj1 {
+  margin-left: auto;
 }
 
-.projectCol {
-  /* height: 100px; */
+#prj3 {
+  margin-left: auto;
+  width: 71%;
 }
 
-#overlapRow {
-  position: relative;
-  top: -100px;
+#prj4 {
+  margin: 0 auto;
+  width: 72%;
 }
 
-#fixWrap {
-  height: 76vh;
+#prj5 {
+  width: 71%;
+}
+
+.hovPrj:hover .projectImg {
+  opacity: 0;
+  transform: scale(0.95, 0.95);
+}
+
+.imgOverlay {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  line-height: 170%;
+  background-color: #73a2ad;
+  color: white;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  margin-right: 2.6%;
+  padding: 5%;
+  opacity: 0;
+  border-radius: 5px;
+  transform: scale(0.93, 0.93);
+  transition-timing-function: ease-out;
+  transition: 0.35s;
+}
+
+#imgOverlay2 {
+  margin-right: 0;
+  margin-left: 3%;
+  left: 0;
+}
+
+#imgOverlay3 {
+  width: 73%;
+  right: -2%;
+  margin-right: 0;
+}
+
+#imgOverlay4 {
+  left: 0;
+  margin: 0 auto;
+}
+
+#imgOverlay5 {
+  width: 73%;
+  left: -2%;
+  margin-right: 0;
+}
+
+.hovPrj:hover .imgOverlay {
+  opacity: 1;
+  transform: scale(1, 1);
+  z-index: 1;
+}
+
+.learnMore {
+  font-size: 1.05vw;
+  text-align: center;
+  width: 37%;
+  color: white;
+  border: 2px white solid;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 2%;
+  position: absolute;
+  left: 6%;
+  bottom: 10%;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+
+.lmSmall {
+  width: 55%;
+}
+
+.learnMore:hover {
+  background-color: white;
+  color: rgb(52, 54, 75);
 }
