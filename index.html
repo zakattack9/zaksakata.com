@@ -312,6 +312,14 @@
         03
       </div>
 
+      <div id="openProject">
+        <div id="closeOpenPrj">
+          <hr id="closePrj1">
+          <hr id="closePrj2">
+          <div id="carrot">^</div>
+        </div>
+      </div>
+
       <div class="container" id="fixWrap">
         <div class="row pl-3 mb-4">
           <div class="col-11 offset-md-1 title" id="projectsTitle" data-aos="fade-up">
@@ -331,7 +339,7 @@
             <div class="imgOverlay">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias culpa est quod ullam animi maxime.
 
-              <div class="learnMore">
+              <div class="learnMore" onclick="openPrjOverlay(1);">
                 Learn More
               </div>
             </div>
@@ -343,7 +351,7 @@
             <div class="imgOverlay" id="imgOverlay2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, molestias culpa est quod ullam animi maxime.
 
-              <div class="learnMore">
+              <div class="learnMore" onclick="openPrjOverlay(2);">
                 Learn More
               </div>
             </div>
@@ -357,7 +365,7 @@
             <div class="imgOverlay" id="imgOverlay3">
               HACC 1st Place Project
 
-              <div class="learnMore lmSmall">
+              <div class="learnMore lmSmall" onclick="openPrjOverlay(3);">
                 Learn More
               </div>
             </div>
@@ -369,7 +377,7 @@
             <div class="imgOverlay" id="imgOverlay4">
               HACC4Edu 1st Place Project
 
-              <div class="learnMore lmSmall">
+              <div class="learnMore lmSmall" onclick="openPrjOverlay(4);">
                 Learn More
               </div>
             </div>
@@ -381,7 +389,7 @@
             <div class="imgOverlay" id="imgOverlay5">
               AT&T Hack 2nd Place Project
 
-              <div class="learnMore lmSmall">
+              <div class="learnMore lmSmall" onclick="openPrjOverlay(5);">
                 Learn More
               </div>
             </div>
@@ -448,6 +456,7 @@
   <!-- Parallax.js (simple parallax scrolling)-->
   <script src="./assets/libs/parallax.min.js"></script>
   <!-- Local JS -->
+  <script src="./assets/js/projectData.js"></script>
   <script src='./assets/js/main.js'></script>
 </body>
 

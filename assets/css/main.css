@@ -32,7 +32,7 @@ html, body {
   overflow-x: hidden;
 }
 
-#main, #about, .section {
+.section {
   background-color: rgb(241, 240, 233);
 }
 
@@ -154,7 +154,7 @@ html, body {
 #cutCorner {
   height: 95%;
   width: 97%;
-  border: 7px rgb(52, 54, 75) solid;
+  border: 7px rgb(80, 82, 109) solid;
   pointer-events:none;
   display: inline-block;
   position: absolute;
@@ -171,7 +171,7 @@ html, body {
   right: -3px;
   top: -3px;
   content:'';
-  border-top: 70px solid rgb(52, 54, 75);
+  border-top: 70px solid rgb(80, 82, 109);
   border-left: 70px solid transparent;
 }
 
@@ -480,13 +480,13 @@ html, body {
 }
 
 .projectImg {
-  /* border: 4px rgb(89, 91, 119) solid; */
+  border: 4px rgb(226, 225, 216) solid;
   display: block;
   border-radius: 5px;
   position: relative;
   top: 0;
   transition-timing-function: ease-out;
-  transition: 0.3s;
+  transition: 0.4s;
   width: 80%;
   opacity: 1;
   z-index: 1;
@@ -544,7 +544,7 @@ html, body {
   border-radius: 5px;
   transform: scale(0.93, 0.93);
   transition-timing-function: ease-out;
-  transition: 0.35s;
+  transition: 0.45s;
 }
 
 #imgOverlay2 {
@@ -599,4 +599,72 @@ html, body {
 .learnMore:hover {
   background-color: white;
   color: rgb(52, 54, 75);
+}
+
+/* Project Overlay Styles */
+#openProject {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  background-color: rgb(241, 240, 233);
+  overflow: hidden;
+  transition: 0.55s;
+}
+
+#closeOpenPrj {
+  position: absolute;
+  right: 1.5%;
+  top: 2%;
+  width: 50px;
+  height: 50px;
+}
+
+#carrot {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: rgb(92, 94, 124); 
+  font-size: 40px;
+  opacity: 0;
+  transform: rotate(135deg) translateY(-35px);
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+#closePrj1, #closePrj2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 30px;
+  height: 1px;
+  border: 0;
+  border-top: 3px rgb(92, 94, 124) solid;
+  transition: 0.3s;
+}
+
+#closePrj1 {
+  transform: rotate(45deg);
+}
+
+#closePrj2 {
+  transform: rotate(-45deg);
+}
+
+#closeOpenPrj:hover #closePrj1 {
+  transform: rotate(0deg);
+}
+
+#closeOpenPrj:hover #closePrj2 {
+  transform: rotate(-180deg);
+}
+
+#closeOpenPrj:hover #carrot {
+  opacity: 1;
+  transform: rotate(90deg) translateY(-18px);
 }
