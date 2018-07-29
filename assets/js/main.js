@@ -26,6 +26,9 @@ $(document).ready(() => {
         });
 
         $('#fp-nav')[0].style.display = 'block';
+
+        $('#zCont')[0].style.right = "50%";
+        $('#kCont')[0].style.left = "49.9%";
       } else {
         $('#zCont')[0].style.right = "50%";
         $('#kCont')[0].style.left = "49.9%";
@@ -105,7 +108,7 @@ function closeOverlay() {
     $('#darken')[0].style.display = "none";
   });
 
-  $('#fp-nav')[0].style.display = 'none';
+  $('#fp-nav')[0].style.display = 'block';
 
   $('#hr2').css({
     "width": "40px",
@@ -216,4 +219,40 @@ function openPrjOverlay(projectNum) {
   $('#darken').fadeTo(400, 0.7);
 
   $('#fp-nav')[0].style.display = 'none';
+
+  var selectedPrj = projects[projectNum - 1]; //subtract 1 since the parameter being passed in is not based off zero index scale
+  var prjTemplate = 
+  `<div class="row mt-md-5 justify-content-md-center">
+    <div class="prjID">Project 0${selectedPrj.id}</div>
+    <div class="col-md-11 prjTitle">${selectedPrj.title}</div>
+    <div class="col-md-11 prjSubTitle">${selectedPrj.subTitle}</div>
+    <div class="col-md-11">
+      <div class="row mt-md-4 prjDesc">
+        <div class="col-md-5 mr-md-2">
+          ${selectedPrj.description}
+
+          <img src="${selectedPrj.imageUrls[1]}" class="img-fluid mt-md-4 overlayPrjImg">
+        </div>
+
+        <div class="col-md-5">
+          <img src="${selectedPrj.imageUrls[2]}" class="img-fluid overlayPrjImg">
+
+          <div class="mt-md-4 pt-md-3">
+            <span class="boldText">Role:</span> ${selectedPrj.role}
+            <br>
+            <span class="boldText">Tech Stack:</span> ${selectedPrj.techStack}
+            <br>
+            <a href="${selectedPrj.githubLink}"><span class="githubRepo">
+              <i class="fab fa-github"></i>
+            </span></a>
+            <a href="${selectedPrj.websiteLink}"><div class="visitSite">Visit Website</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+  console.log(selectedPrj);
+  $('#prjCont').empty();
+  $('#prjCont').append(prjTemplate);
 }

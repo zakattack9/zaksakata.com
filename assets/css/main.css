@@ -36,6 +36,10 @@ html, body {
   background-color: rgb(241, 240, 233);
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 /* #tiltEl {
   background-color: red;
   transform-style: preserve-3d;
@@ -62,7 +66,7 @@ html, body {
   top: 0;
   height: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 101; /* z-index set 101 to go over navigation on side */
   background-color: rgb(241, 240, 233);
   box-shadow: 0px 1px 1px rgb(241, 240, 233);
   transition: 0.4s;
@@ -117,7 +121,7 @@ html, body {
   right: 0.8%;
   width: 70px;
   height: 40px;
-  z-index: 10;
+  z-index: 102;
   transform: rotate(45deg);
   transition: 0.2s;
 }
@@ -376,6 +380,9 @@ html, body {
 }
 
 #subTitle1 {
+  /* font-family: "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300; */
   font-family: 'Righteous', cursive;
   font-weight: 100;
   font-size: 3em;
@@ -579,12 +586,12 @@ html, body {
 .learnMore {
   font-size: 1.05vw;
   text-align: center;
-  width: 37%;
+  display: inline-block;
   color: white;
   border: 2px white solid;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: 2%;
+  padding: 2% 3.5%;
   position: absolute;
   left: 6%;
   bottom: 10%;
@@ -608,7 +615,7 @@ html, body {
   position: absolute;
   top: 0;
   right: -100%;
-  z-index: 11;
+  z-index: 103; /* needs to be 103 in order to be above menu button */
   background-color: rgb(241, 240, 233);
   overflow: hidden;
   transition: 0.6s;
@@ -620,6 +627,7 @@ html, body {
   top: 2%;
   width: 50px;
   height: 50px;
+  z-index: 10;
 }
 
 #carrot {
@@ -667,4 +675,87 @@ html, body {
 #closeOpenPrj:hover #carrot {
   opacity: 1;
   transform: rotate(90deg) translateY(-18px);
+}
+/* 
+#prjCont, #prjCont .row {
+  height: 100%;
+} */
+
+.prjID {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  font-family: Techy;
+  letter-spacing: 2px;
+  transform: rotate(-90deg);
+  color: #73a2ad;
+}
+
+.prjTitle { /*standard for all titles*/
+  font-family: 'Righteous', cursive;
+  font-weight: bold;
+  font-size: 3.5em;
+  color: rgb(52, 54, 75);
+  line-height: 1em;
+}
+
+.prjSubTitle {
+  /* font-family: 'Righteous', cursive; */
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 2.5em;
+  color: rgb(89, 91, 119);
+  line-height: 1.2em;
+  letter-spacing: 1px;
+}
+
+.prjDesc {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  /* font-size: 17px; */
+  font-size: 1.05em;
+  color: rgb(43, 45, 63);
+}
+
+.overlayPrjImg {
+  border: 5px rgb(226, 225, 216) solid;
+  border-radius: 5px;
+}
+
+.boldText {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.githubRepo {
+  font-size: 1.6em;
+  color: rgb(75, 77, 102);
+  transition: 0.4s;
+  vertical-align: middle;
+}
+
+.githubRepo:hover {
+  color: rgb(43, 45, 63);
+}
+
+.visitSite {
+  font-size: 0.7em;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 5px 10px;
+  color: rgb(75, 77, 102);
+  border: 2px rgb(75, 77, 102) solid;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 400;
+  transition: 0.5s;
+  vertical-align: bottom;
+}
+
+.visitSite:hover {
+  background-color: rgb(43, 45, 63);
+  color: white;
+  border: 2px rgb(43, 45, 63) solid;
 }
