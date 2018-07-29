@@ -368,6 +368,7 @@ a:hover {
   font-size: 2em;
   color: #73a2ad;
   transform: rotate(90deg);
+  z-index: 2;
 }
 
 .title { /*standard for all titles*/
@@ -762,4 +763,52 @@ a:hover {
 
 #checkOutDL {
   font-size: 0.8em;
+}
+
+/* Blog/Photography Section */
+#fullHeight {
+  height: 100%;
+}
+
+#blogSide, #photoSide {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  transition: 0.35s;
+  text-align: center;
+}
+
+#blogSide {
+  background-color: #84dcc6;
+  left: 0;
+}
+
+#photoSide {
+  background-color: #73a2ad;
+  right: 0;
+}
+
+#blogSide:hover {
+  width: 55%;
+}
+
+#blogSide:hover + #photoSide {
+  right: -5%;
+}
+
+#photoSide:hover {
+  width: 55%;
+}
+
+#photoSide:hover + #blogSide{
+  left: -5%;
+}
+
+
+/* Contact Page Section */
+#contactContainer {
+  height: 400px;
+  background-color: rgb(231, 230, 220);
 }
