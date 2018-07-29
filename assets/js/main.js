@@ -98,6 +98,31 @@ $(document).ready(() => {
   var newSkillsPlx = document.getElementById('newSkillsPlx');
   var parallaxInstance9 = new Parallax(newSkillsPlx);
 
+  //Parallax Scenes for Selected Projects Section
+  var projectsTitle = document.getElementById('projectsTitle');
+  var parallaxInstance15 = new Parallax(projectsTitle);
+  parallaxInstance15.invert(false, true);
+
+  var spPlxSubTitle = document.getElementById('spPlxSubTitle');
+  var parallaxInstance15 = new Parallax(spPlxSubTitle);
+
+  //Parallax Scenes for Work Experience Section
+  var logoPlx = document.getElementById('logoPlx');
+  var parallaxInstance10 = new Parallax(logoPlx);
+
+  var wePlxTitle = document.getElementById('wePlxTitle');
+  var parallaxInstance11 = new Parallax(wePlxTitle);
+  parallaxInstance11.invert(false, true);
+
+  var wePlxSubTitle = document.getElementById('wePlxSubTitle');
+  var parallaxInstance12 = new Parallax(wePlxSubTitle);
+  parallaxInstance12.invert(false, true);
+
+  var wePlxDesc1 = document.getElementById('wePlxDesc1');
+  var parallaxInstance13 = new Parallax(wePlxDesc1);
+
+  var wePlxDesc2 = document.getElementById('wePlxDesc2');
+  var parallaxInstance14 = new Parallax(wePlxDesc2);
 });
 
 //opens and closes overlay
@@ -224,8 +249,8 @@ function openPrjOverlay(projectNum) {
   var prjTemplate = 
   `<div class="row mt-md-5 justify-content-md-center">
     <div class="prjID">Project 0${selectedPrj.id}</div>
-    <div class="col-md-11 prjTitle">${selectedPrj.title}</div>
-    <div class="col-md-11 prjSubTitle">${selectedPrj.subTitle}</div>
+    <div class="col-md-11 prjTitle title">${selectedPrj.title}</div>
+    <div class="col-md-11 subTitle">${selectedPrj.subTitle}</div>
     <div class="col-md-11">
       <div class="row mt-md-4 prjDesc">
         <div class="col-md-5 mr-md-2">

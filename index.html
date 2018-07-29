@@ -127,14 +127,14 @@
           <div class="col-md-6" id="aboutTextPlx">
             <div data-depth="0.025">
               <div class="row">
-                <div class="col-sm title" data-aos="fade-up">
+                <div class="col-sm mb-4 title" data-aos="fade-up">
                   About Me
                   <span style="color: #84dcc6">.</span>
                 </div>
 
                 <div class="w-100"></div>
 
-                <div class="col-sm" id="subTitle1" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-sm subTitle" data-aos="fade-up" data-aos-delay="300">
                   Hello I'm Zak. Welcome!
                 </div>
 
@@ -246,7 +246,7 @@
 
           <div class="col-md-5" id="skillsParallax">
             <div data-depth="0.025">
-              <div class="col-sm title" data-aos="fade-up">
+              <div class="col-sm my-4 title" data-aos="fade-up">
                 Skills
                 <span style="color: #84dcc6">.</span>
               </div>
@@ -264,7 +264,7 @@
         <div class="row">
           <div class="col-md-4 align-self-center" id="skillsParallax2">
             <div data-depth="0.05">
-              <div id="subTitle2" data-aos="fade-up" data-aos-delay="300">
+              <div id="subTitleSkills" data-aos="fade-up" data-aos-delay="300">
                 <!-- Languages / Frameworks I'm Currently Learning -->
                 Currently
                 <br>Learning:
@@ -320,37 +320,7 @@
         </div>
 
         <div class="container" id="prjCont">
-          <div class="row mt-md-5 justify-content-md-center">
-            <div class="prjID">Project 01</div>
-            <div class="col-md-11 prjTitle">Lanakila Meals on Wheels</div>
-            <div class="col-md-11 prjSubTitle">Highschool Capstone Project</div>
-            <div class="col-md-11">
-              <div class="row mt-md-4 prjDesc">
-                <div class="col-md-5 mr-md-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et necessitatibus labore distinctio velit tempore temporibus obcaecati,
-                  ullam pariatur sunt. Molestiae dolorum corporis fuga quas, aliquam eos incidunt perferendis odit nesciunt!
-                  Molestiae dolorum corporis fuga quas, aliquam eos incidunt perferendis odit nesciunt!
-
-                  <img src="./assets/img/projects/lanakila3.png" class="img-fluid mt-md-4 overlayPrjImg">
-                </div>
-
-                <div class="col-md-5">
-                  <img src="./assets/img/projects/lanakila2.png" class="img-fluid overlayPrjImg">
-
-                  <div class="mt-md-4 pt-md-3">
-                    <span class="boldText">Role:</span> Project Manager
-                    <br>
-                    <span class="boldText">Tech Stack:</span> AWS, HTML, CSS, JS
-                    <br>
-                    <a href="https://github.com/zakattack9/Lanakila-Meals-on-Wheels-Project"><span class="githubRepo">
-                      <i class="fab fa-github"></i>
-                    </span></a>
-                    <a href="https://zakattack9.github.io/Lanakila-Meals-on-Wheels-Project/index.html"><div class="visitSite">Visit Website</div></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- project data dynamically injected -->
         </div>
 
       </div>
@@ -358,16 +328,21 @@
       <div class="container" id="fixWrap">
         <div class="row pl-3 mb-4">
           <div class="col-11 offset-md-1 title" id="projectsTitle" data-aos="fade-up">
-            Selected Projects
-            <span style="color: #84dcc6">.</span>
+            <div data-depth="0.02">
+              Selected Projects
+              <span style="color: #84dcc6">.</span>
+            </div>
           </div>
 
-          <div class="col-10 offset-md-1 description" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-out">
-            Here are some of my most recent works!
+          <div class="col-10 offset-md-1 mb-1 subTitle" id="spPlxSubTitle" data-aos="fade-up" data-aos-delay="450" data-aos-easing="ease-out"
+            style="font-size: 2em;">
+            <div data-depth="0.03">
+              Here are some of my most recent works!
+            </div>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" data-aos="fade-up" data-aos-delay="400">
           <div class="col-md-6 hovPrj">
             <img src="./assets/img/projects/lanakila1.png" class="projectImg" id="prj1">
 
@@ -393,14 +368,14 @@
           </div>
         </div>
 
-        <div class="row no-gutters">
+        <div class="row no-gutters" data-aos="fade-up" data-aos-delay="500">
           <div class="col-md-4 mt-4 hovPrj">
             <img src="./assets/img/projects/daizzy2.png" class="projectImg" id="prj3">
 
             <div class="imgOverlay" id="imgOverlay3">
               HACC 1st Place Project
 
-              <div class="learnMore lmSmall" onclick="openPrjOverlay(3);">
+              <div class="learnMore" onclick="openPrjOverlay(3);">
                 Learn More
               </div>
             </div>
@@ -412,7 +387,7 @@
             <div class="imgOverlay" id="imgOverlay4">
               HACC4Edu 1st Place Project
 
-              <div class="learnMore lmSmall" onclick="openPrjOverlay(4);">
+              <div class="learnMore" onclick="openPrjOverlay(4);">
                 Learn More
               </div>
             </div>
@@ -424,7 +399,7 @@
             <div class="imgOverlay" id="imgOverlay5">
               AT&T Hack 2nd Place Project
 
-              <div class="learnMore lmSmall" onclick="openPrjOverlay(5);">
+              <div class="learnMore" onclick="openPrjOverlay(5);">
                 Learn More
               </div>
             </div>
@@ -441,6 +416,44 @@
 
       <div class="container">
 
+        <div class="row justify-content-md-center">
+          <div id="logoPlx">
+            <img src="./assets/img/devleague.png" class="align-self-center" data-depth="0.1">
+          </div>
+
+          <div class="col-md-10 title" data-aos="fade-up" id="wePlxTitle">
+            <div data-depth="0.03">
+              Work Experience
+              <span style="color: #84dcc6">.</span>
+            </div>
+          </div>
+
+          <div class="col-md-10 mb-4 subTitle" data-aos="fade-up" data-aos-delay="400" id="wePlxSubTitle">
+            <div data-depth="0.03">
+              DevLeague Internship
+            </div>
+          </div>
+
+          <div class="col-md-5 pr-5 description" data-aos="fade-up" data-aos-delay="500" id="wePlxDesc1">
+            <div data-depth="0.05">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia voluptas officia modi quam deserunt asperiores doloremque
+              magni est quis, quae dolor reprehenderit velit. Consectetur velit ducimus voluptate nulla similique vel.
+            </div>
+          </div>
+
+          <div class="col-md-5 pr-5 description" data-aos="fade-up" data-aos-delay="500" id="wePlxDesc2">
+            <div data-depth="0.05">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolorum praesentium. Corrupti, illo. Iusto fugit facilis
+              impedit hic harum, dolorum aperiam mollitia at unde quae fuga repudiandae, totam quo tempora?
+            </div>
+          </div>
+
+          <div class="col-md-10 mt-4" data-aos="fade-up" data-aos-delay="500">
+            <a href="https://www.devleague.com/">
+              <div class="visitSite" id="checkOutDL">Check out DevLeague</div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 

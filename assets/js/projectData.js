@@ -49,7 +49,7 @@ const projects = [
   {
     id: 4,
     title: "Defenders of the Bay",
-    subTitle: "Hawaii Annual Code Challenge 4 Education 1st Place Project",
+    subTitle: "Hawaii Annual Code Challenge For Education 1st Place Project",
     role: "Lead Developer",
     techStack: "HTML, CSS, JS",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et necessitatibus labore distinctio velit tempore temporibus obcaecati,ullam pariatur sunt. Molestiae dolorum corporis fuga quas, aliquam eos incidunt perferendis odit nesciunt!Molestiae dolorum corporis fuga quas, aliquam eos incidunt perferendis odit nesciunt!",

@@ -374,20 +374,23 @@ a:hover {
   font-family: 'Righteous', cursive;
   font-weight: bold;
   font-size: 5em;
-  line-height: 1.5em;
-  box-sizing: border-box;
+  line-height: 1em;
   color: rgb(52, 54, 75);
 }
 
-#subTitle1 {
-  /* font-family: "Helvetica Neue", sans-serif;
-  letter-spacing: 1px;
-  font-weight: 300; */
-  font-family: 'Righteous', cursive;
+.subTitle {
+  /* font-family: 'Righteous', cursive;
   font-weight: 100;
   font-size: 3em;
   color: rgb(89, 91, 119);
+  line-height: 1.2em; */
+
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 2.5em;
+  color: rgb(89, 91, 119);
   line-height: 1.2em;
+  letter-spacing: 1px;
 }
 
 .description { /*standard for all descriptions*/
@@ -396,7 +399,7 @@ a:hover {
   letter-spacing: 2px;
   /* font-size: 17px; */
   font-size: 1.08em;
-  color: rgb(43, 45, 63);
+  color: rgb(50, 53, 73);
 }
 
 #profileImg {
@@ -470,7 +473,7 @@ a:hover {
   list-style: none;
 }
 
-#subTitle2 {
+#subTitleSkills {
   font-family: 'Righteous', cursive;
   font-weight: 100;
   font-size: 1.7em;
@@ -584,23 +587,19 @@ a:hover {
 }
 
 .learnMore {
-  font-size: 1.05vw;
+  font-size: 0.8em;
+  border-radius: 3px;
   text-align: center;
   display: inline-block;
   color: white;
   border: 2px white solid;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: 2% 3.5%;
+  padding: 5px 15px;
   position: absolute;
   left: 6%;
   bottom: 10%;
   transition: 0.5s;
-  border-radius: 2px;
-}
-
-.lmSmall {
-  width: 55%;
 }
 
 .learnMore:hover {
@@ -692,22 +691,17 @@ a:hover {
 }
 
 .prjTitle { /*standard for all titles*/
-  font-family: 'Righteous', cursive;
-  font-weight: bold;
   font-size: 3.5em;
-  color: rgb(52, 54, 75);
-  line-height: 1em;
 }
 
-.prjSubTitle {
-  /* font-family: 'Righteous', cursive; */
+/* .prjSubTitle {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 300;
   font-size: 2.5em;
   color: rgb(89, 91, 119);
   line-height: 1.2em;
   letter-spacing: 1px;
-}
+} */
 
 .prjDesc {
   font-family: "Helvetica Neue", sans-serif;
@@ -736,7 +730,7 @@ a:hover {
 }
 
 .githubRepo:hover {
-  color: rgb(43, 45, 63);
+  color: rgb(52, 54, 75);
 }
 
 .visitSite {
@@ -755,7 +749,17 @@ a:hover {
 }
 
 .visitSite:hover {
-  background-color: rgb(43, 45, 63);
+  background-color: rgb(52, 54, 75);
   color: white;
-  border: 2px rgb(43, 45, 63) solid;
+  border: 2px rgb(52, 54, 75) solid;
+}
+
+/* Work Experience Section */
+#logoPlx {
+  position: absolute;
+  opacity: 0.25;
+}
+
+#checkOutDL {
+  font-size: 0.8em;
 }
