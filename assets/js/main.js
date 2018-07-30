@@ -2,6 +2,7 @@ $(document).ready(() => {
   $('#fullpage').fullpage({
     licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 
+    //autoScrolling: true,
     navigation: true,
     navigationPosition: "right",
     easingcss3: "ease-in",

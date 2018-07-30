@@ -214,7 +214,7 @@ a:hover {
   color: rgb(92, 94, 124);
   /* font-style: italic; */
   position: absolute;
-  bottom: 12%;
+  bottom: 13%;
 }
 
 #downArrow {
@@ -868,7 +868,78 @@ a:hover {
 }
 
 /* Contact Page Section */
-#contactContainer {
-  height: 400px;
+/* #contactContainer {
+  height: 500px;
   background-color: rgb(241, 240, 233);
+} */
+
+#copyright {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.8em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 5%;
+  background-color: rgb(228, 227, 220);
+  color: rgb(75, 76, 97);
+  position: absolute;
+  bottom: 0;
+}
+
+.inputField {
+  width: 100%;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  outline: none;
+  color: white;
+  border: none;
+  background-color: rgb(52, 54, 75);
+  padding: 20px 25px;
+  border-radius: 2px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #76a5af;
+  opacity: 1;
+}
+
+#msgInp {
+  resize: none;
+  outline: none; 
+  height: 170px;
+}
+
+#send {
+  font-size: 0.8em;
+  position: absolute;
+  right: 0;
+}
+
+#send:hover {
+  color: #84dcc6;
+}
+
+.contactRight {
+  text-align: center;
+}
+
+#contactInitials {
+  width: 45%;
+  display: block;
+  margin: 0 auto;
+}
+
+.contactIcon {
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  transition: 0.2s;
+}
+
+.contactIcon:hover {
+  color: #73a2ad;
 }
