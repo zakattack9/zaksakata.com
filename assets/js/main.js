@@ -315,6 +315,8 @@ $('#send').on('click', () => { //validates all field inputs are filled and inclu
     formValid = false;
 
   } else if (formValid) {
+    $('#send')[0].style.opacity = "0";
+
     $.ajax({
       url: "https://5bstnxh46j.execute-api.us-west-2.amazonaws.com/dev/contact",
       method: 'POST',
@@ -327,6 +329,21 @@ $('#send').on('click', () => { //validates all field inputs are filled and inclu
         "message" : $('#msgInp').val()
       })
     })
+    .done((response) => {
+      $('#hideSubmit').fadeTo(500, 0, () => {
+        $('#showSubmit')[0].style.zIndex = "2";
+          $('#showSubmit')[0].style.opacity = "1";
+      });
+    })
+    .fail((err) => {
+      $('#hideSubmit').fadeTo(500, 0, () => {
+        $('#showFail')[0].style.zIndex = "2";
+          $('#showFail')[0].style.opacity = "1";
+      });
+    })
+
+    
+
   }
 
 })

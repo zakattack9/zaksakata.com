@@ -32,6 +32,16 @@ module.exports.sendInfo = (event, context, callback) => {
   dynamodb.putItem(dynamoParams, (err, data) => {
     if (err) {
       console.log(err, err.stack); // an error occurred
+
+      const response = {
+        statusCode: 500,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Credentials": true,
+        },
+        body: JSON.stringify(err.stack)
+      }
+      callback(null, response);
     } else {
       let snsParams = {
         Message: 
@@ -48,7 +58,15 @@ module.exports.sendInfo = (event, context, callback) => {
 
       sns.publish(snsParams, function(err, data) {
         if (err) {
-          console.log("Error", err.stack); 
+          const response = {
+		        statusCode: 500,
+		        headers: {
+		          "Access-Control-Allow-Origin": "*",
+		          "Access-Control-Allow-Credentials": true,
+		        },
+		        body: JSON.stringify(err.stack)
+		      }
+		      callback(null, response);
         } else {
           console.log("Success", data);
           

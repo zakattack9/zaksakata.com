@@ -936,6 +936,7 @@ a:hover {
   font-size: 0.8em;
   position: absolute;
   right: 0;
+  transition: 0.4s;
 }
 
 #send:hover {
@@ -961,4 +962,42 @@ a:hover {
 
 .contactIcon:hover {
   color: #73a2ad;
+}
+
+#hideSubmit {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+
+#showSubmit {
+  position: absolute;
+  top: 15%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  z-index: 0;
+  transition: 1s;
+}
+
+#successIcon {
+  font-size: 4em;
+  color: #84dcc6;
+}
+
+#showFail {
+  position: absolute;
+  top: 15%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  z-index: 0;
+  transition: 1s;
+}
+
+#failIcon {
+  font-size: 4em;
+  color: #ff6d6d;
 }
