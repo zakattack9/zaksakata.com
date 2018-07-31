@@ -1,15 +1,19 @@
 'use strict';
 
 const AWS = require('aws-sdk');
+const process = require('process');
 AWS.config.update({ region: 'us-west-2' });
 
 const dynamodb = new AWS.DynamoDB({ apiVersion: '2012-08-10' });
-const sns = new AWS.SNS({apiVersion: '2010-03-31'});
+const sns = new AWS.SNS({ apiVersion: '2010-03-31' });
 
 module.exports.sendInfo = (event, context, callback) => {
   console.log("hello", event.body);
   let { name, email, subject, message } = JSON.parse(event.body);
   console.log(name, email, subject, message);
+  
+  let topicARN = process.env.ARN; //environmental variable with ARN
+  console.log(topicARN);
 
   var dynamoParams = {
     Item: {
@@ -31,7 +35,7 @@ module.exports.sendInfo = (event, context, callback) => {
 
   dynamodb.putItem(dynamoParams, (err, data) => {
     if (err) {
-      console.log(err, err.stack); // an error occurred
+      console.log(err, err.stack);
 
       const response = {
         statusCode: 500,
@@ -43,9 +47,10 @@ module.exports.sendInfo = (event, context, callback) => {
       }
       callback(null, response);
     } else {
+
       let snsParams = {
-        Message: 
-        `
+        Message:
+          `
         NEW CONTACT MESSAGE
         Name: ${name}
         Email: ${email}
@@ -53,23 +58,25 @@ module.exports.sendInfo = (event, context, callback) => {
         Message: ${message}
         `,
         MessageStructure: 'string',
-        TopicArn: ""
+        TopicArn: topicARN
       };
 
-      sns.publish(snsParams, function(err, data) {
+      sns.publish(snsParams, function (err, data) {
         if (err) {
+          console.log(err.stack);
+
           const response = {
-		        statusCode: 500,
-		        headers: {
-		          "Access-Control-Allow-Origin": "*",
-		          "Access-Control-Allow-Credentials": true,
-		        },
-		        body: JSON.stringify(err.stack)
-		      }
-		      callback(null, response);
+            statusCode: 500,
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Credentials": true,
+            },
+            body: JSON.stringify(err.stack)
+          }
+          callback(null, response);
         } else {
           console.log("Success", data);
-          
+
           const response = {
             statusCode: 200,
             headers: {
@@ -79,11 +86,11 @@ module.exports.sendInfo = (event, context, callback) => {
             body: JSON.stringify(data)
           }
           callback(null, response);
-        } 
+        }
       })
 
-    }          
-    
+    }
+
   });
 
   // const response = {
