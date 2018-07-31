@@ -30,6 +30,7 @@ html, body {
 
 #fullpage { /*disables horizontal scrollbar from appearing when using any parallax effect*/
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .section {
@@ -887,6 +888,13 @@ a:hover {
   color: rgb(75, 76, 97);
   position: absolute;
   bottom: 0;
+}
+
+#emailFooter {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  text-transform: none;
 }
 
 .inputField {
