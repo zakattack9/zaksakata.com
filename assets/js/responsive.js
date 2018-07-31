@@ -1,5 +1,7 @@
 //JS media queries for disabling certain libraries
-$(window).resize(() => {
+
+function responsive () {
+
   /* Smartphone Portrait Mode */
   if (window.matchMedia("(min-width: 0px)").matches) {
     fullpage_api.setResponsive(true);
@@ -61,4 +63,9 @@ $(window).resize(() => {
   if (window.matchMedia("(min-width: 1200px)").matches) {
 
   }
+}
+responsive(); //determine what to enable/disable on load
+
+$(window).resize(() => {
+  responsive();
 });

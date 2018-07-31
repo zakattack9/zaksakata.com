@@ -1,75 +1,75 @@
-$(document).ready(() => {
-  $('#fullpage').fullpage({
-    licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 
-    //autoScrolling: false,
-    navigation: true,
-    navigationPosition: "right",
-    easingcss3: "ease-in",
-    scrollBar: true,
-    touchSensitivity: 1,
-    // scrollOverflow: true,
+$('#fullpage').fullpage({
+  licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 
-    onLeave: function (origin, destination, direction) { //fades menu tab in and out
-      if (origin.index == 0 && direction == 'down') {
-        $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
-        $('#zCont')[0].style.right = "57%";
-        $('#kCont')[0].style.left = "57%";
-      } else if (origin.index == 1 && direction == 'up') {
-        $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
-        $('#zCont')[0].style.right = "50%";
-        $('#kCont')[0].style.left = "49.9%";
-      } else if (origin.index == 4 && direction == 'up' || 'down') {
-        $('#openProject')[0].style.right = "-100%";
-        $('#darken').fadeTo(400, 0, () => {
-          $('#darken')[0].style.display = "none";
-        });
+  //autoScrolling: false,
+  navigation: true,
+  navigationPosition: "right",
+  easingcss3: "ease-in",
+  scrollBar: true,
+  touchSensitivity: 1,
+  // scrollOverflow: true,
 
-        $('#fp-nav')[0].style.display = 'block';
+  onLeave: function (origin, destination, direction) { //fades menu tab in and out
+    if (origin.index == 0 && direction == 'down') {
+      $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+      $('#zCont')[0].style.right = "57%";
+      $('#kCont')[0].style.left = "57%";
+    } else if (origin.index == 1 && direction == 'up') {
+      $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+      $('#zCont')[0].style.right = "50%";
+      $('#kCont')[0].style.left = "49.9%";
+    } else if (origin.index == 4 && direction == 'up' || 'down') {
+      $('#openProject')[0].style.right = "-100%";
+      $('#darken').fadeTo(400, 0, () => {
+        $('#darken')[0].style.display = "none";
+      });
 
-        $('#zCont')[0].style.right = "50%";
-        $('#kCont')[0].style.left = "49.9%";
-      } else {
-        $('#zCont')[0].style.right = "50%";
-        $('#kCont')[0].style.left = "49.9%";
-      }
-    }
+      $('#fp-nav')[0].style.display = 'block';
 
-  });
-
-  function enableAOS () { //determines whether to run AOS (only runs on desktop computers)
-    if (window.matchMedia("(min-width: 992px)").matches) {
-      console.log('bigenough');
-      return false;
+      $('#zCont')[0].style.right = "50%";
+      $('#kCont')[0].style.left = "49.9%";
     } else {
-      return true;
+      $('#zCont')[0].style.right = "50%";
+      $('#kCont')[0].style.left = "49.9%";
     }
   }
 
-  AOS.init({
-    // Global settings
-    disable: enableAOS(),
-    startEvent: 'DOMContentLoaded',
-    initClassName: 'aos-init',
-    animatedClassName: 'aos-animate',
-    useClassNames: false,
-
-    // Settings that can be overriden on per-element basis, by `data-aos-*` attributes:
-    offset: 120,
-    delay: 200,
-    duration: 600,
-    easing: 'ease-in-out',
-    once: false,
-    mirror: true,
-    anchorPlacement: 'top-bottom',
-  });
-
-  $('#animateName').tilt({
-    //glare: true,
-    //maxGlare: 0.5, //determines how bright the glare is
-    scale: 1.05, //scales tilt element
-  })
 });
+
+function enableAOS() { //determines whether to run AOS (only runs on desktop computers)
+  if (window.matchMedia("(min-width: 992px)").matches) {
+    console.log('bigenough');
+    return false;
+  } else {
+    return true;
+  }
+}
+
+AOS.init({
+  // Global settings
+  disable: enableAOS(), //does not disable on window resize
+  startEvent: 'DOMContentLoaded',
+  initClassName: 'aos-init',
+  animatedClassName: 'aos-animate',
+  useClassNames: false,
+
+  // Settings that can be overriden on per-element basis, by `data-aos-*` attributes:
+  offset: 120,
+  delay: 200,
+  duration: 600,
+  easing: 'ease-in-out',
+  once: false,
+  mirror: true,
+  anchorPlacement: 'top-bottom',
+});
+
+$('#animateName').tilt({
+  //glare: true,
+  //maxGlare: 0.5, //determines how bright the glare is
+  scale: 1.05, //scales tilt element
+})
+
 
 //Parallax scenes must be out of $(document).ready scop
 //Parallax Scenes for Main Page
