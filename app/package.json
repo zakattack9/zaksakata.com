@@ -1,0 +1,23 @@
+{
+  "name": "zaksakata.com",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakattack9/zaksakata.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakattack9/zaksakata.com/issues"
+  },
+  "homepage": "https://github.com/zakattack9/zaksakata.com#readme",
+  "dependencies": {
+    "aws-sdk": "^2.283.1"
+  }
+}
