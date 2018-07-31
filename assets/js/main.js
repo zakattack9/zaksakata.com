@@ -37,9 +37,18 @@ $(document).ready(() => {
 
   });
 
+  function enableAOS () { //determines whether to run AOS (only runs on desktop computers)
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      console.log('bigenough');
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   AOS.init({
     // Global settings
-    disable: 'tablet',
+    disable: enableAOS(),
     startEvent: 'DOMContentLoaded',
     initClassName: 'aos-init',
     animatedClassName: 'aos-animate',
