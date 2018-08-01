@@ -3,7 +3,7 @@ const projects = [
   {
     id: 1,
     title: "Lanakila Meals on Wheels",
-    subTitle: "Highschool Capstone Project",
+    subTitle: "High School Capstone Project",
     role: "Project Manager",
     techStack: "AWS, JS, HTML, CSS",
     description: "Lanakila Meals on Wheels is an elderly meal service that asked us to create an application which would provide them with a better system of communication. With our app, Lanakila can create groups and add subscribers to these groups; they can then create messages that are broadcasted to those groups through various mediums simultaneously with the push of a button.",
@@ -21,7 +21,7 @@ const projects = [
     subTitle: "Website Redesign",
     role: "UI / UX Designer",
     techStack: "Wix",
-    description: "I was asked by my former highschool to help design their website intended for recieving funds from benefactors. The main interfaces I helped design were the home, donation, and alumni stories page. I kept a bright and simple interface that made for easy navigation while really highlighting student projects and the highschool's mission.",
+    description: "I was asked by my former high school to help design their website intended for recieving funds from benefactors. The main interfaces I helped design were the home, donation, and alumni stories page. I kept a bright and simple interface that made for easy navigation while really highlighting student projects and the high school's mission.",
     imageUrls: [
       "./assets/img/projects/whs1.png",
       "./assets/img/projects/whs2.png",
@@ -33,7 +33,7 @@ const projects = [
   {
     id: 3,
     title: "DAIZZY",
-    subTitle: "Hawaii Annual Code Challenge 1st Place Project In Highschool Division",
+    subTitle: "Hawaii Annual Code Challenge 1st Place Project In High School Division",
     role: "Lead Developer",
     techStack: "AWS, HTML, CSS, JS",
     description: "My team and I created a chatbot with a custom AI that would assist the Hawaii's Office of Elections in scheduling volunteers during voting months; our application idea took a more modern/interactive approach to scheduling volunteers as opposed to traditional methods of registration such as plain forms or calendars/phone calls.",

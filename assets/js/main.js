@@ -218,12 +218,12 @@ $('#skillsOpt').on('click', () => {
   closeOverlay();
 })
 
-$('#projectsOpt').on('click', () => {
+$('#workOpt').on('click', () => {
   fullpage_api.moveTo(4);
   closeOverlay();
 })
 
-$('#workOpt').on('click', () => {
+$('#projectsOpt').on('click', () => {
   fullpage_api.moveTo(5);
   closeOverlay();
 })
