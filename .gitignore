@@ -4,5 +4,4 @@ jspm_packages
 
 # Serverless directories
 .serverless
-
-app/contact.js
+config.json

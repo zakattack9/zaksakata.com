@@ -259,7 +259,7 @@ a:hover {
 }
 
 #animateName {
-  height: 50%;
+  height: 30%;
   overflow: hidden;
 }
 
@@ -325,6 +325,7 @@ a:hover {
   z-index: 0;
 }
 
+/* About Section Styles */
 #layerScene {
   position: absolute;
   top: 0;

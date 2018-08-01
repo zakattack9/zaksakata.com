@@ -32,13 +32,13 @@ function responsive () {
 
   /* Medium devices (tablets, 768px and up) */
   if (window.matchMedia("(min-width: 768px)").matches) {
+    fullpage_api.setResponsive(false);
     
   }
   
   /* Large devices (desktops, 992px and up) */
   if (window.matchMedia("(min-width: 992px)").matches) {
-    console.log('test');
-    fullpage_api.setResponsive(false);
+    //console.log('test');
 
     parallaxInstance.enable();
     parallaxInstance2.enable();

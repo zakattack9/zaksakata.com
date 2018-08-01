@@ -1,4 +1,3 @@
-
 $('#fullpage').fullpage({
   licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
 
@@ -60,7 +59,7 @@ AOS.init({
   duration: 600,
   easing: 'ease-in-out',
   once: false,
-  mirror: true,
+  mirror: false,
   anchorPlacement: 'top-bottom',
 });
 
@@ -340,18 +339,18 @@ $('#send').on('click', () => { //validates all field inputs are filled and inclu
         "message": $('#msgInp').val()
       })
     })
-      .done((response) => {
-        $('#hideSubmit').fadeTo(500, 0, () => {
-          $('#showSubmit')[0].style.zIndex = "2";
-          $('#showSubmit')[0].style.opacity = "1";
-        });
-      })
-      .fail((err) => { //show error page
-        $('#hideSubmit').fadeTo(500, 0, () => {
-          $('#showFail')[0].style.zIndex = "2";
-          $('#showFail')[0].style.opacity = "1";
-        });
-      })
+    .done((response) => {
+      $('#hideSubmit').fadeTo(500, 0, () => {
+        $('#showSubmit')[0].style.zIndex = "2";
+        $('#showSubmit')[0].style.opacity = "1";
+      });
+    })
+    .fail((err) => { //show error page
+      $('#hideSubmit').fadeTo(500, 0, () => {
+        $('#showFail')[0].style.zIndex = "2";
+        $('#showFail')[0].style.opacity = "1";
+      });
+    })
 
   }
 

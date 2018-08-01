@@ -113,25 +113,3 @@
   }
 }
 
-@keyframes fadeDownTxt {
-  0% {
-    top: 9%;
-    opacity: 0;
-  }
-  100% {
-    top: 13%;
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUpTxt {
-  0% {
-    bottom: 8%;
-    opacity: 0;
-  }
-  100% {
-    bottom: 12%;
-    opacity: 1;
-  }
-}
-
