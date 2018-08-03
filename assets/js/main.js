@@ -11,11 +11,15 @@ $('#fullpage').fullpage({
 
   onLeave: function (origin, destination, direction) { //fades menu tab in and out
     if (origin.index == 0 && direction == 'down') {
-      $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+      }
       $('#zCont')[0].style.right = "57%";
       $('#kCont')[0].style.left = "57%";
     } else if (origin.index == 1 && direction == 'up') {
-      $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
+      }
       $('#zCont')[0].style.right = "50%";
       $('#kCont')[0].style.left = "49.9%";
     } else if (origin.index == 4 && direction == 'up' || 'down') {
@@ -159,6 +163,13 @@ function closeOverlay() {
   $('#hr1').css({
     "margin-bottom": "",
   })
+
+  if (window.matchMedia("(max-width: 990px)").matches) {
+    $('#hr1').css({
+      "opacity": "1",
+      "margin-bottom": "5px",
+    })
+  }
 }
 
 $('#menuBtn').on('click', () => {
@@ -339,18 +350,18 @@ $('#send').on('click', () => { //validates all field inputs are filled and inclu
         "message": $('#msgInp').val()
       })
     })
-    .done((response) => {
-      $('#hideSubmit').fadeTo(500, 0, () => {
-        $('#showSubmit')[0].style.zIndex = "2";
-        $('#showSubmit')[0].style.opacity = "1";
-      });
-    })
-    .fail((err) => { //show error page
-      $('#hideSubmit').fadeTo(500, 0, () => {
-        $('#showFail')[0].style.zIndex = "2";
-        $('#showFail')[0].style.opacity = "1";
-      });
-    })
+      .done((response) => {
+        $('#hideSubmit').fadeTo(500, 0, () => {
+          $('#showSubmit')[0].style.zIndex = "2";
+          $('#showSubmit')[0].style.opacity = "1";
+        });
+      })
+      .fail((err) => { //show error page
+        $('#hideSubmit').fadeTo(500, 0, () => {
+          $('#showFail')[0].style.zIndex = "2";
+          $('#showFail')[0].style.opacity = "1";
+        });
+      })
 
   }
 

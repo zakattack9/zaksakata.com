@@ -183,6 +183,9 @@ No media query for `xs` since this is the default in Bootstrap
     display: block;
     margin: 0 auto;
   }
+
+  /* Contact Styles */
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -416,6 +419,9 @@ No media query for `xs` since this is the default in Bootstrap
     display: inline-block;
     margin: unset;
   }
+
+  /* Contact Styles */
+
 }
 
 /* Large devices (desktops, 992px and up) */
