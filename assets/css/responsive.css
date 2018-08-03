@@ -169,6 +169,20 @@ No media query for `xs` since this is the default in Bootstrap
     width: 100%;
   }
 
+  .bpTitle {
+    font-size: 3em;
+  }
+
+  .bpDesc {
+    font-size: 0.8em;
+    margin: 0 auto;
+  }
+
+  #goToMedium, #goToPhotography {
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -369,7 +383,39 @@ No media query for `xs` since this is the default in Bootstrap
   }
 
   /* Blog/Photography Styles */
+  #blogSide {
+    height: 100%;
+    width: 50%;
+    top: unset;
+  }
 
+  #photoSide {
+    height: 100%;
+    width: 50%;
+  }
+
+  #blogSide:hover {
+    width: 55%;
+  }
+
+  #photoSide:hover {
+    width: 55%;
+  }
+
+  .bpTitle {
+    font-size: 4em;
+  }
+
+  .bpDesc {
+    font-size: unset;
+    margin: unset;
+  }
+
+  #goToMedium, #goToPhotography {
+    width: unset;
+    display: inline-block;
+    margin: unset;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

@@ -802,9 +802,9 @@ a:hover {
   right: 0;
 }
 
-#blogSide:hover {
+/* #blogSide:hover {
   width: 55%;
-}
+} */
 
 #blogSide:hover + #photoSide {
   /* right: -5%; */
@@ -819,9 +819,9 @@ a:hover {
   opacity: 0.5;
 } */
 
-#photoSide:hover {
+/* #photoSide:hover {
   width: 55%;
-}
+} */
 
 #photoSide:hover + #blogSide{
   /* left: -5%; */
