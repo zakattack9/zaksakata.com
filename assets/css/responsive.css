@@ -9,6 +9,10 @@ No media query for `xs` since this is the default in Bootstrap
     display: none !important;
   }
 
+  .pageNum {
+    display: none;
+  }
+
   #cutCorner {
     border: 0px rgb(80, 82, 109) solid;
   }
@@ -144,6 +148,27 @@ No media query for `xs` since this is the default in Bootstrap
     margin-right: 0;
   }
 
+  #openProject {
+    width: 100%;
+    height: auto;
+  }
+
+  .prjDesc {
+    text-align: center;
+  }
+
+  /* Blog/Photography Styles */
+  #blogSide {
+    height: 50%;
+    width: 100%;
+    top: 0;
+  }
+
+  #photoSide {
+    height: 50%;
+    width: 100%;
+  }
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -155,6 +180,10 @@ No media query for `xs` since this is the default in Bootstrap
 @media (min-width: 768px) {
   #fp-nav, .fp-nav {
     display: block !important;
+  }
+
+  .pageNum {
+    display: none;
   }
 
   #cutCorner {
@@ -329,6 +358,18 @@ No media query for `xs` since this is the default in Bootstrap
     left: -2%;
     margin-right: 0;
   }
+
+  #openProject {
+    width: 90%;
+    height: 100%;
+  }
+
+  .prjDesc {
+    text-align: left;
+  }
+
+  /* Blog/Photography Styles */
+
 }
 
 /* Large devices (desktops, 992px and up) */

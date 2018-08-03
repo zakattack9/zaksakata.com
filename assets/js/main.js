@@ -260,20 +260,20 @@ function openPrjOverlay(projectNum) {
   var prjTemplate =
     `<div class="row mt-md-5 justify-content-md-center">
     <div class="prjID">Project 0${selectedPrj.id}</div>
-    <div class="col-md-11 prjTitle title">${selectedPrj.title}</div>
-    <div class="col-md-11 subTitle">${selectedPrj.subTitle}</div>
+    <div class="col-md-11 mt-md-0 mt-4 mb-md-0 mb-3 prjTitle title">${selectedPrj.title}</div>
+    <div class="col-md-11 mb-md-0 mb-2 subTitle">${selectedPrj.subTitle}</div>
     <div class="col-md-11">
-      <div class="row mt-md-4 prjDesc">
-        <div class="col-md-5 mr-md-2">
+      <div class="row mt-md-4 justify-content-md-start justify-content-center prjDesc">
+        <div class="col-md-5 col-10 mr-md-2">
           ${selectedPrj.description}
 
-          <img src="${selectedPrj.imageUrls[1]}" class="img-fluid mt-md-4 overlayPrjImg">
+          <img src="${selectedPrj.imageUrls[1]}" class="img-fluid mt-4 overlayPrjImg">
         </div>
 
-        <div class="col-md-5">
-          <img src="${selectedPrj.imageUrls[2]}" class="img-fluid overlayPrjImg">
+        <div class="col-md-5 col-10">
+          <img src="${selectedPrj.imageUrls[2]}" class="img-fluid my-md-0 my-4 overlayPrjImg">
 
-          <div class="mt-md-4 pt-md-3">
+          <div class="mt-md-4 pt-md-3 mb-md-0 mb-5">
             <span class="boldText">Role:</span> ${selectedPrj.role}
             <br>
             <span class="boldText">Tech Stack:</span> ${selectedPrj.techStack}
