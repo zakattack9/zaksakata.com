@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123358350-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123358350-1');
+  </script>
+
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
@@ -77,7 +88,7 @@
 
       <div id="cutCorner">
         <div id="shortBlurb">
-          <div data-depth="0.03">Web Developer<br class="responsiveBreak"> ~ <br class="responsiveBreak">UI / UX <span id="hideOnSmall">Design</span></div>
+          <div data-depth="0.03">Web Developer<span class="responsiveBreak"></span> ~ <span class="responsiveBreak"></span>UI / UX <span id="hideOnSmall">Design</span></div>
         </div>
 
         <div id="shortBlurbSub">
@@ -129,7 +140,7 @@
           <div class="col-md-6" id="aboutTextPlx">
             <div data-depth="0.025">
               <div class="row">
-                <div class="col-sm mb-4 mt-md-0 mt-sm-5 title" data-aos="fade-up">
+                <div class="col-sm mb-4 mt-md-0 mt-4 title" data-aos="fade-up">
                   About Me<span style="color: #84dcc6">.</span>
                 </div>
 
@@ -141,7 +152,7 @@
 
                 <div class="w-100"></div>
 
-                <div class="col-sm description" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-out">
+                <div class="col-sm mb-md-0 mb-3 description" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-out">
 
                   <!-- After discovering coding two years ago, I've been determined to improve my skills every day as both a developer and UI/UX designer. I've had the fortunate experience of teaching coding to students, competing in hackathons, and collaborating with many other knowledgable individuals. I'm always ready for a challenge and open to new experiences. -->
 
@@ -153,9 +164,9 @@
             </div>
           </div>
 
-          <div class="col-md-5 col-sm-3 align-self-center" data-aos="fade-left" data-aos-delay="450">
+          <div class="col-md-5 col-sm-3 pb-md-0 pb-4 align-self-center" data-aos="fade-left" data-aos-delay="450">
             <div id="imgParallax">
-              <img data-depth="0.09" class="offset-md-1" data-src="./assets/img/profile.jpg" id="profileImg">
+              <img data-depth="0.09" class="offset-md-1" src="./assets/img/profile.jpg" id="profileImg">
             </div>
           </div>
         </div>
@@ -169,10 +180,10 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-md-6 offset-md-1" id="skillCardsPlx">
+          <div class="col-md-6 offset-md-1 order-md-1 order-12" id="skillCardsPlx">
             <div data-depth="0.07">
-              <div class="row no-gutters skillsList">
-                <div class="col-md-4">
+              <div class="row no-gutters justify-content-center skillsList">
+                <div class="col-md-4 col-6">
                   <div class="iconWrap">
                     <span class="iconSize">
                       <i class="fab fa-html5"></i>
@@ -184,7 +195,7 @@
                     <li>- Bootstrap</li>
                   </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-6">
                   <div class="iconWrap">
                     <span class="iconSize">
                       <i class="fab fa-css3-alt"></i>
@@ -197,7 +208,7 @@
                     <!-- <li>• Responsive Design</li> -->
                   </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-6">
                   <div class="iconWrap">
                     <span class="iconSize">
                       <i class="fab fa-js-square"></i>
@@ -210,7 +221,7 @@
                   </ul>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 col-6">
                   <div class="iconWrap">
                     <span class="iconSize">
                       <i class="fab fa-aws"></i>
@@ -222,7 +233,7 @@
                     <li>- Serverless</li>
                   </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-6">
                   <div class="iconWrap">
                     <span class="iconSize">
                       <i class="fas fa-database"></i>
@@ -234,7 +245,7 @@
                     <li>- DynamoDB</li>
                   </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-6">
                   <div class="iconWrap">
                     <img src="./assets/img/adobeCClogo.png" id="adobeLogo">
                     <div class="skillTitle">ADOBE CC</div>
@@ -248,14 +259,13 @@
             </div>
           </div>
 
-          <div class="col-md-5" id="skillsParallax">
+          <div class="col-md-5 order-md-12 order-1" id="skillsParallax">
             <div data-depth="0.03">
               <div class="col-sm my-4 title" data-aos="fade-up">
-                Skills
-                <span style="color: #84dcc6">.</span>
+                Skills<span style="color: #84dcc6">.</span>
               </div>
 
-              <div class="col-md-10 description" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-out">
+              <div class="col-md-10 mb-md-0 mb-4 pb-md-0 pb-2 description" data-aos="fade-up" data-aos-delay="500" data-aos-easing="ease-out">
                 <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quasi, repellat, deleniti perspiciatis impedit possimus, temporibus libero quibusdam natus numquam nisi magnam? Molestias eius facilis aliquam debitis, libero ad veniam! edit possimus, temporibus libero quibus -->
 
                 Aside from the standard front-end languages, I have experience in developing serverless applications with AWS, working with
@@ -267,21 +277,20 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-4 align-self-center" id="skillsParallax2">
+        <div class="row justify-content-md-start justify-content-center">
+          <div class="col-md-4 mb-md-0 mb-4 mt-md-0 mt-3 col-11 align-self-center" id="skillsParallax2">
             <div data-depth="0.05">
               <div id="subTitleSkills" data-aos="fade-up" data-aos-delay="300">
                 <!-- Languages / Frameworks I'm Currently Learning -->
-                Currently
-                <br>Learning:
+                Currently<br>Learning:
               </div>
             </div>
           </div>
 
-          <div class="col-md-6" id="newSkillsPlx">
+          <div class="col-md-6 px-md-0 px-3" id="newSkillsPlx">
             <div data-depth="0.09">
               <div class="row no-gutters skillsList">
-                <div class="col-md-4">
+                <div class="col-md-4 col-4">
                   <div class="iconWrap newSkill">
                     <span class="iconSize">
                       <i class="fab fa-python"></i>
@@ -289,7 +298,7 @@
                     <div class="skillTitle">PYTHON</div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-4">
                   <div class="iconWrap newSkill">
                     <span class="iconSize">
                       <i class="fab fa-react"></i>
@@ -297,7 +306,7 @@
                     <div class="skillTitle">REACT</div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-4">
                   <div class="iconWrap newSkill">
                     <span class="iconSize">
                       <i class="fab fa-node"></i>
@@ -320,16 +329,15 @@
 
       <div class="container">
 
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-center">
           <div id="logoPlx">
             <img src="./assets/img/devleague.png" class="align-self-center" data-depth="0.1">
           </div>
 
-          <div class="col-md-10 title" id="wePlxTitle">
+          <div class="col-md-10 mt-md-0 mt-5 mb-md-0 mb-4 title" id="wePlxTitle">
             <div data-depth="0.03">
               <div data-aos="fade-up">
-                Work Experience
-                <span style="color: #84dcc6">.</span>
+                Work Experience</span><span style="color: #84dcc6">.</span>
               </div>
             </div>
           </div>
@@ -337,12 +345,12 @@
           <div class="col-md-10 mb-4 subTitle" id="wePlxSubTitle">
             <div data-depth="0.03">
               <div data-aos="fade-up" data-aos-delay="400">
-                DevLeague Internship (2017-2018)
+                DevLeague Internship<span class="responsiveBreak"></span>(2017-2018)
               </div>
             </div>
           </div>
 
-          <div class="col-md-5 pr-5 description" id="wePlxDesc1">
+          <div class="col-md-5 col-11 pr-md-5 mb-md-0 mb-4 description" id="wePlxDesc1">
             <div data-depth="0.05">
               <div data-aos="fade-up" data-aos-delay="500">
                 Based out of Hawaii, DevLeague runs coding bootcamps and is the leader in integrating coding into Hawaii's education system. I was hired as a teaching assistant at both intermediate and high school levels, where I taught front-end devlopment and developed projects for students.
@@ -350,7 +358,7 @@
             </div>
           </div>
 
-          <div class="col-md-5 pr-5 description" id="wePlxDesc2">
+          <div class="col-md-5 col-11 pr-md-5 description" id="wePlxDesc2">
             <div data-depth="0.05">
               <div data-aos="fade-up" data-aos-delay="500">
                 During spring break, I lead DevLeague's Spring Media Program (1 week course) where I taught students the basics of photography/videography and how to use high-level editing software such as Adobe Lightroom and Adobe Premiere.
@@ -386,12 +394,11 @@
       </div>
 
       <div class="container" id="fixWrap">
-        <div class="row pl-3 mb-4">
-          <div class="col-11 offset-md-1 title" id="projectsTitle">
+        <div class="row pl-md-3 mb-4 justify-content-md-start justify-content-center">
+          <div class="col-11 mt-md-0 mt-5 mb-md-0 mb-4 offset-md-1 title" id="projectsTitle">
             <div data-depth="0.02">
               <div data-aos="fade-up">
-                Selected Projects
-                <span style="color: #84dcc6">.</span>
+                Selected Projects<span style="color: #84dcc6">.</span>
               </div>
             </div>
           </div>
@@ -405,11 +412,11 @@
           </div>
         </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="400">
+        <div class="row justify-content-md-start justify-content-center" data-aos="fade-up" data-aos-delay="400">
           <div class="col-md-6 hovPrj">
             <img src="./assets/img/projects/lanakila1.png" class="projectImg" id="prj1">
 
-            <div class="imgOverlay">
+            <div class="imgOverlay" id="imgOverlay1">
               Lanakila Meals on Wheels Project, a mass communication tool using AWS Polly, SNS, S3, and RDS.
 
               <div class="learnMore" onclick="openPrjOverlay(1);">
@@ -418,7 +425,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 hovPrj">
+          <div class="col-md-6 mt-md-0 mt-4 hovPrj">
             <img src="./assets/img/projects/whs1.png" class="projectImg" id="prj2">
 
             <div class="imgOverlay" id="imgOverlay2">
