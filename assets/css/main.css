@@ -92,6 +92,7 @@ a:hover {
   list-style: none;
   letter-spacing: 5px;
   text-transform: uppercase;
+  cursor: default;
 }
 
 #overlayOptions li {
