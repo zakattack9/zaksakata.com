@@ -10,6 +10,7 @@ $('#fullpage').fullpage({
   // scrollOverflow: true,
 
   onLeave: function (origin, destination, direction) { //fades menu tab in and out
+    closeOverlay();
     if (origin.index == 0 && direction == 'down') {
       if (window.matchMedia("(min-width: 768px)").matches) {
         $('#menuBtn').fadeTo(50, 0).delay(400).fadeTo(200, 1);
@@ -42,7 +43,7 @@ $('#fullpage').fullpage({
 
 function enableAOS() { //determines whether to run AOS (only runs on desktop computers)
   if (window.matchMedia("(min-width: 992px)").matches) {
-    console.log('bigenough');
+    //console.log('bigenough');
     return false;
   } else {
     return true;
@@ -179,7 +180,8 @@ $('#menuBtn').on('click', () => {
     $('#darken')[0].style.display = "block";
     $('#darken').fadeTo(400, 0.7);
 
-    $('#fp-nav')[0].style.display = 'none';
+    // $('#fp-nav')[0].style.display = 'none !important';
+    $('#fp-nav').attr('style', 'display: none !important');
 
     $('#hr2').css({
       "width": "30px",
