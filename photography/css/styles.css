@@ -1,0 +1,75 @@
+/*
+font-family: 'Cutive Mono', monospace;
+font-family: 'Iceland', cursive;
+font-family: 'Righteous', cursive;
+font-family: "Helvetica Neue", sans-serif;
+ */
+
+@font-face {
+  font-family: Techy;
+  src: url(../fonts/Techy.woff);
+}
+
+@font-face {
+  font-family: GlossBloom;
+  src: url(../fonts/Gloss_And_Bloom.woff);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#homeVideo {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+  /* left: 50%;
+  top: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%); */
+}
+
+#homeText {
+  font-family: GlossBloom;
+  /* font-family: "Helvetica Neue", sans-serif; */
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  text-align: center;
+  font-size: 5em;
+  color: white;
+  line-height: 1em;
+}
+
+#homeSubTxt {
+  font-family: "Helvetica Neue", sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 0.5em;
+  color: white;
+}
+
+#sideMenu {
+
+}
+
+#socialLinks {
+  width: 100%;
+  padding-bottom: 25px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.iconSize {
+  font-size: 2em;
+  color: white;
+}

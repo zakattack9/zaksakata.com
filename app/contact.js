@@ -46,8 +46,51 @@ module.exports.sendInfo = (event, context, callback) => {
         body: JSON.stringify(err.stack)
       }
       callback(null, response);
-    } else {
 
+      let snsFailParams = {
+        Message:
+        `
+        WEBSITE MESSAGE FAILED TO STORE IN DYNAMO
+        (CHECK CLOUDFRONT)
+        Name: ${name}
+        Email: ${email}
+        Subject: ${subject}
+        Message: ${message}
+        `,
+        MessageStructure: 'string',
+        TopicArn: topicARN
+      };
+
+      sns.publish(snsFailParams, function (err, data) {
+        if (err) {
+          console.log(err.stack);
+
+          const response = {
+            statusCode: 500,
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Credentials": true,
+            },
+            body: JSON.stringify(err.stack)
+          }
+          callback(null, response);
+        } else {
+          console.log("Success", data);
+
+          const response = {
+            statusCode: 200,
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Credentials": true,
+            },
+            body: JSON.stringify(data)
+          }
+          callback(null, response);
+        }
+      })
+
+    } else {
+      
       let snsParams = {
         Message:
           `
