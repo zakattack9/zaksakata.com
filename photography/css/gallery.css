@@ -24,6 +24,13 @@ html, body {
   font-family: GlossBloom;
   font-size: 1.2em;
   line-height: 0em;
+  cursor: default;
+  transition: 0.2s;
+  color: black;
+}
+
+#galleryName:hover {
+  color:#84dcc6;
 }
 
 #gallerySub {
@@ -32,6 +39,12 @@ html, body {
   font-weight: 200;
   font-size: 1.05em;
   color: rgb(95, 95, 95);
+  cursor: default;
+  transition: 0.2s;
+}
+
+#gallerySub:hover {
+  color: #73a2ad;
 }
 
 #galleryOpt ul {
@@ -42,6 +55,7 @@ html, body {
   font-size: 1.2em;
   font-style: italic;
   color: rgb(135, 137, 165);
+  cursor: default;
 }
 
 #galleryOpt ul li {

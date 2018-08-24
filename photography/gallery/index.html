@@ -60,7 +60,7 @@
     <br>
 
     <div class="overlayOpt">
-      <a href="">
+      <a href="#">
         Main Site
       </a>
     </div>
@@ -95,17 +95,17 @@
 
   <div class="container" id="galleryHeader">
     <div class="row">
-      <div class="col-6 pt-4">
-        <span id="galleryName">Zak Sakata</span>
+      <div class="col-md-6 pt-4">
+        <a href="../"><span id="galleryName">Zak Sakata</span></a>
         <br>
         <span id="gallerySub">gallery</span>
       </div>
 
-      <div class="col-6 text-right pt-3 pr-5" id="galleryOpt">
+      <div class="col-md-6 text-right pt-3 pr-md-5" id="galleryOpt">
         <ul>
           <li>All</li>
-          <li>Japan</li>
-          <li>Arizona</li>
+          <li onclick="showPictures(0, 'japan');">Japan</li>
+          <li onclick="showPictures(1, 'arizona');">Arizona</li>
           <li>Smoke Bombs</li>
           <li>Architecture</li>
           <li>Other</li>
@@ -115,11 +115,25 @@
     </div>
   </div>
 
-  <div class="container mt-5">
-    <div class="row pt-2 pb-5">
-      <div class="col-4 pr-5 pt-5 pb-3">
+  <!-- needs to be outside of #galleryMain -->
+  <div class="sk-cube-grid" id="loadingAnim"> <!-- loading animaton -->
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+  </div>
 
-        <div class="imgWrapper">
+  <div class="container mt-5" id="galleryMain">
+
+    <div class="row pt-2 pb-5">
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
+
+        <div class="imgWrapper" onclick="showPictures(0, 'japan');">
           <img src="../img/mainGallery/Japan Square.jpg" class="galleryImg img-fluid">
           <div class="imgOverlay">
             <span class="imgText">Japan</span>
@@ -128,8 +142,8 @@
 
       </div>
 
-      <div class="col-4 pr-5 pt-5 pb-3">
-        <div class="imgWrapper">
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
+        <div class="imgWrapper" onclick="showPictures(1, 'arizona');">
           <img src="../img/mainGallery/Arizona Square.jpg" class="galleryImg img-fluid">
           <div class="imgOverlay">
             <span class="imgText">Arizona</span>
@@ -137,7 +151,7 @@
         </div>
       </div>
 
-      <div class="col-4 pr-5 pt-5 pb-3">
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
         <div class="imgWrapper">
           <img src="../img/mainGallery/Smoke Square.jpg" class="galleryImg img-fluid">
           <div class="imgOverlay">
@@ -146,7 +160,7 @@
         </div>
       </div>
 
-      <div class="col-4 pr-5 pt-5 pb-3">
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
         <div class="imgWrapper">
           <img src="../img/mainGallery/Architecture Square.jpg" class="galleryImg img-fluid">
           <div class="imgOverlay">
@@ -155,16 +169,17 @@
         </div>
       </div>
 
-      <div class="col-4 pr-5 pt-5 pb-3">
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
         <div class="imgWrapper">
           <img src="../img/mainGallery/Other Square.jpg" class="galleryImg img-fluid">
           <div class="imgOverlay">
-            <span class="imgText">Oth<br/>er</span>
+            <span class="imgText">Oth
+              <br/>er</span>
           </div>
         </div>
       </div>
 
-      <div class="col-4 pr-5 pt-5 pb-3">
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
         <div class="imgWrapper">
           <img src="../img/mainGallery/Video Square.png" class="galleryImg img-fluid">
           <div class="imgOverlay">
@@ -174,7 +189,10 @@
       </div>
 
     </div>
+
   </div>
+
+
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -187,7 +205,10 @@
     crossorigin="anonymous"></script>
   <!-- Animate on Scroll JS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Masonry JS -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <!-- Local JS -->
+  <script src="../js/photoData.js"></script>
   <script src="../js/gallery.js"></script>
 </body>
 
