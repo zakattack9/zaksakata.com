@@ -112,7 +112,8 @@ html, body {
   position: absolute;
   left: 2%;
   bottom: 2%;
-
+  cursor: default;
+  transition: 0.2s;
 }
 
 .imgWrapper:hover .imgOverlay {
