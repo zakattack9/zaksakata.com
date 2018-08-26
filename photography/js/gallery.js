@@ -16,8 +16,8 @@ AOS.init({
   anchorPlacement: 'top-center',
 });
 
-// Initialize Masonry
-
+//pushes base state to URL
+history.pushState({selectedFolder: 'gallery'}, 'newtitle', `/photography/gallery/`);
 
 let overlayOpen = false;
 $('#sideMenu').on('click', () => {
@@ -52,11 +52,11 @@ $('#sideMenu').on('click', () => {
     $('#sideMenu').addClass('overlayOpen');
   }
   
-})
+});
 
 $('#gallerySub').on('click', () => {
-  location.reload();
-})
+  window.location = "../gallery/";
+});
 
 function shuffle (array) { //shuggle images
   let i = 0;
@@ -73,6 +73,13 @@ function shuffle (array) { //shuggle images
 
 //console.log(PHOTO_DATA);
 function showPictures (category, folder) {
+  let historyObj = {
+    selectedCategory: category,
+    selectedFolder: folder
+  }
+  //history.pushState(historyObj, 'newtitle', `/photography/gallery/${folder}`);\
+  location.hash = `${folder}/`
+
   $('#galleryMain').empty();
   let clonedAnim = $('#loadingAnim').clone()
   $('#galleryMain').append(clonedAnim);
@@ -84,7 +91,7 @@ function showPictures (category, folder) {
     //console.log(currVal);
     appendImgs += `
     <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
-      <img class="img-fluid" src="../img/${folder}/${currVal.img}">
+      <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
     </div>
     `;
   })
@@ -116,3 +123,25 @@ function showPictures (category, folder) {
   }, 1500); //need to change timeout for more pictures
 
 }
+
+//allows user to use back button; also changes URL
+// $(window).on('popstate', function(e){
+//   console.log(e.originalEvent.state.selectedFolder);
+//   let destination = e.originalEvent.state.selectedFolder;
+//   //console.log(e.target.location.pathname);
+//   if (destination === 'gallery') {
+//     //location.reload();
+//     window.location = "../gallery/";
+//   } else {
+//     showPictures(destination.selectedCategory, destination.selectedFolder);
+//   }
+// });
+
+$(window).on('popstate', function(e){
+  console.log(e.originalEvent.state.selectedFolder);
+  let destination = e.originalEvent.state.selectedFolder;
+  if (destination === 'gallery') {
+    //location.reload();
+    window.location = "../gallery/";
+  }
+});

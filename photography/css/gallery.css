@@ -121,8 +121,14 @@ html, body {
   opacity: 0.8;
 }
 
-.landImg {
-  height: 100%;
-  width: auto; 
-  bottom: 0;
+.singleImg {
+  position: relative;
+  top: 0;
+  box-shadow: 0px 0px 0px gray;
+  transition: 0.2s;
+}
+
+.singleImg:hover {
+  top: -5px;
+  box-shadow: 0px 10px 10px rgb(173, 173, 173);
 }

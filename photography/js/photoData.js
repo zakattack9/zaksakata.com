@@ -688,11 +688,5 @@ const PHOTO_DATA = [
       location: "Kunia, Hawaii",
       date: "10•2017"
     },
-    {
-      id: 48,
-      img: "SB48.jpg",
-      location: "Kunia, Hawaii",
-      date: "11•2017"
-    },
   ],
 ]
