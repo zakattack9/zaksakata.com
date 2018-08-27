@@ -54,7 +54,7 @@ html, body {
   font-weight: 200;
   font-size: 1.2em;
   font-style: italic;
-  color: rgb(135, 137, 165);
+  color: rgb(141, 141, 141);
   cursor: default;
 }
 
@@ -131,4 +131,48 @@ html, body {
 .singleImg:hover {
   top: -5px;
   box-shadow: 0px 10px 10px rgb(173, 173, 173);
+}
+
+.imgData {
+  display: none;
+}
+
+#imgPopup {
+  background-color: white;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+.imgCaption {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  color: rgb(88, 88, 88);
+}
+
+#closePop {
+  font-family: "Helvetica Neue", sans-serif;
+  position: absolute;
+  top: 60px;
+  left: -20px;
+  font-weight: 400;
+  color: rgb(117, 117, 117);
+  cursor: default;
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+
+#closePop:hover {
+  color: rgb(46, 46, 46);
+}
+
+.popImg {
+  max-width: 100%;
+  max-height: 100%;
 }

@@ -17,7 +17,9 @@ AOS.init({
 });
 
 //pushes base state to URL
-history.pushState({selectedFolder: 'gallery'}, 'newtitle', `/photography/gallery/`);
+history.pushState({ selectedFolder: 'gallery' }, 'newtitle', `/photography/gallery/`);
+
+$('#imgPopup')[0].style.paddingTop = $('#galleryHeader').height() + 'px';
 
 let overlayOpen = false;
 $('#sideMenu').on('click', () => {
@@ -51,14 +53,14 @@ $('#sideMenu').on('click', () => {
     $('#sideMenu').removeClass('overlayClose');
     $('#sideMenu').addClass('overlayOpen');
   }
-  
+
 });
 
 $('#gallerySub').on('click', () => {
   window.location = "../gallery/";
 });
 
-function shuffle (array) { //shuggle images
+function shuffle(array) { //shuggle images
   let i = 0;
   let j = 0;
   let temp = null;
@@ -72,16 +74,17 @@ function shuffle (array) { //shuggle images
 }
 
 //console.log(PHOTO_DATA);
-function showPictures (category, folder) {
-  let historyObj = {
+function showPictures(category, folder) {
+  /*let historyObj = {
     selectedCategory: category,
     selectedFolder: folder
-  }
+  }*/
   //history.pushState(historyObj, 'newtitle', `/photography/gallery/${folder}`);\
-  location.hash = `${folder}/`
+  location.hash = `${folder}/`;
 
+  $('#imgPopup')[0].style.display = "none"; //closes image popup
   $('#galleryMain').empty();
-  let clonedAnim = $('#loadingAnim').clone()
+  let clonedAnim = $('#loadingAnim').clone();
   $('#galleryMain').append(clonedAnim);
   clonedAnim[0].style.display = "block";
 
@@ -92,12 +95,18 @@ function showPictures (category, folder) {
     appendImgs += `
     <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
       <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
+
+      <span class="imgData">
+        Location: ${currVal.location}<br/>
+        Date: ${currVal.date}<br/><br/>
+        <span style="font-style: italic">${currVal.id}/${PHOTO_DATA[category].length}</span>
+      </span>
     </div>
     `;
   })
-  
+
   let photoLayout =
-  `
+    `
   <div class="row pt-2 pb-5">
     <div class="col-lg-12">
       <div class="gallery-wrapper clearfix">
@@ -137,11 +146,38 @@ function showPictures (category, folder) {
 //   }
 // });
 
-$(window).on('popstate', function(e){
-  console.log(e.originalEvent.state.selectedFolder);
-  let destination = e.originalEvent.state.selectedFolder;
-  if (destination === 'gallery') {
-    //location.reload();
-    window.location = "../gallery/";
+$(window).on('popstate', function (e) {
+  //console.log(e.originalEvent.state);
+  if (e.originalEvent.state !== null) {
+    let destination = e.originalEvent.state.selectedFolder;
+    if (destination === 'gallery') {
+      //location.reload();
+      window.location = "../gallery/";
+    }
   }
 });
+
+//functionality for expanding up single images
+$(document).on('click', '.singleImg', (e) => {
+  let currImg = e.target;
+  let currImgData = $(currImg).siblings('.imgData')[0].innerHTML;
+  $('#imgPopup').empty();
+  //console.log($(currImg).siblings('.imgData')[0].innerHTML);
+  $('#imgPopup')[0].style.display = "block";
+
+  $('#imgPopup').append(`
+    <div class="row h-100">
+      <div class="col-3 pb-5 align-self-end text-right imgCaption">
+        ${currImgData}
+      </div>
+      <div class="col-9 pb-5 pr-5 h-100 align-self-end">
+        <div id="closePop">close</div>
+        <img src="${currImg.src}" class="popImg pt-5">
+      </div>
+    </div>
+  `)
+})
+
+$(document).on('click', '#closePop', () => {
+  $('#imgPopup')[0].style.display = "none";
+})
