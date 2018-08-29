@@ -40,7 +40,7 @@ $('#send').on('click', () => { //validates all field inputs are filled and inclu
       data: JSON.stringify({
         "name": $('#nameInp').val(),
         "email": $('#emailInp').val(),
-        "subject": $('#subjectInp').val(),
+        "subject": $('#subjectInp').val() + " (Photography)",
         "message": $('#msgInp').val()
       })
     })
