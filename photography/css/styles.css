@@ -179,6 +179,17 @@ a:hover {
   transition: 0.3s;
 }
 
+#darken {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(230, 230, 230);
+  opacity: 0;
+}
+
 #initials {
   width: 35px;
   position: absolute;
