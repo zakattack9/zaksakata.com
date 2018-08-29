@@ -343,6 +343,12 @@ const PHOTO_DATA = [
       location: "Senso-Ji Temple",
       date: "06-2018"
     },
+    {
+      id: 58,
+      img: "58.jpg",
+      location: "Senso-Ji Temple",
+      date: "06-2018"
+    },
 
   ],
 
@@ -689,4 +695,251 @@ const PHOTO_DATA = [
       date: "10-2017"
     },
   ],
+
+  [
+    //"architecture",
+    {
+      id: 1,
+      img: "A1.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 2,
+      img: "A2.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 3,
+      img: "A3.jpg",
+      location: "Ginza",
+      date: "06-2018"
+    },
+    {
+      id: 4,
+      img: "A4.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 5,
+      img: "A5.jpg",
+      location: "UCSD",
+      date: "12-2017"
+    },
+    {
+      id: 6,
+      img: "A6.jpg",
+      location: "Mori Tower",
+      date: "06-2018"
+    },
+    {
+      id: 7,
+      img: "A7.jpg",
+      location: "Mori Tower",
+      date: "06-2018"
+    },
+    {
+      id: 8,
+      img: "A8.jpg",
+      location: "UCSD",
+      date: "12-2017"
+    },
+    {
+      id: 9,
+      img: "A9.jpg",
+      location: "Mori Tower",
+      date: "12-2017"
+    },
+    {
+      id: 10,
+      img: "A10.jpg",
+      location: "Hawaii",
+      date: "04-2018"
+    },
+    {
+      id: 11,
+      img: "A11.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 12,
+      img: "A12.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 13,
+      img: "A13.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+  ],
+  [
+    //"other"
+    {
+      id: 1,
+      img: "1.jpg",
+      location: "Hilo, Hawaii",
+      date: "07-2017"
+    },
+    {
+      id: 2,
+      img: "2.jpg",
+      location: "Hawaii",
+      date: "06-2017"
+    },
+    {
+      id: 3,
+      img: "3.jpg",
+      location: "Hawaii",
+      date: "06-2017"
+    },
+    {
+      id: 4,
+      img: "4.jpg",
+      location: "Hawaii",
+      date: "06-2017"
+    },
+    {
+      id: 5,
+      img: "5.jpg",
+      location: "Hawaii",
+      date: "06-2017"
+    },
+    {
+      id: 6,
+      img: "6.jpg",
+      location: "Hawaii",
+      date: "06-2017"
+    },
+    {
+      id: 7,
+      img: "7.jpg",
+      location: "Kunia, Hawaii",
+      date: "06-2017"
+    },
+    {
+      id: 8,
+      img: "8.jpg",
+      location: "Kunia, Hawaii",
+      date: "06-2017"
+    },
+    {
+      id: 9,
+      img: "9.jpg",
+      location: "Pike Place",
+      date: "12-2017"
+    },
+    {
+      id: 10,
+      img: "10.jpg",
+      location: "Sonic Runway",
+      date: "12-2017"
+    },
+    {
+      id: 11,
+      img: "11.jpg",
+      location: "Santa Clara",
+      date: "12-2017"
+    },
+    {
+      id: 12,
+      img: "12.jpg",
+      location: "Santa Clara",
+      date: "12-2017"
+    },
+    {
+      id: 13,
+      img: "13.jpg",
+      location: "Santa Clara",
+      date: "12-2017"
+    },
+    {
+      id: 14,
+      img: "14.jpg",
+      location: "Stanford",
+      date: "12-2017"
+    },
+    {
+      id: 15,
+      img: "15.jpg",
+      location: "Space Needle",
+      date: "12-2017"
+    },
+    {
+      id: 16,
+      img: "16.jpg",
+      location: "Stanford",
+      date: "12-2017"
+    },
+    {
+      id: 17,
+      img: "17.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 18,
+      img: "18.jpg",
+      location: "Stanford",
+      date: "12-2017"
+    },
+    {
+      id: 19,
+      img: "19.jpg",
+      location: "Stanford",
+      date: "12-2017"
+    },
+    {
+      id: 20,
+      img: "20.jpg",
+      location: "Hawaii",
+      date: "12-2017"
+    },
+    {
+      id: 21,
+      img: "21.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 22,
+      img: "22.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 23,
+      img: "23.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 24,
+      img: "24.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 25,
+      img: "25.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 26,
+      img: "26.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+    {
+      id: 27,
+      img: "27.jpg",
+      location: "UDUB",
+      date: "12-2017"
+    },
+  ]
 ]

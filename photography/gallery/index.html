@@ -112,8 +112,8 @@
           <li onclick="showPictures(0, 'japan');">Japan</li>
           <li onclick="showPictures(1, 'arizona');">Arizona</li>
           <li onclick="showPictures(2, 'smoke');">Smoke Bombs</li>
-          <li>Architecture</li>
-          <li>Other</li>
+          <li onclick="showPictures(3, 'architecture');">Architecture</li>
+          <li onclick="showPictures(4, 'other');">Other</li>
           <li>Videos</li>
         </ul>
       </div>
@@ -166,7 +166,7 @@
       </div>
 
       <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
-        <div class="imgWrapper">
+        <div class="imgWrapper" onclick="showPictures(3, 'architecture');">
           <img src="../img/mainGallery/Architecture Square.jpg" class="galleryImg img-fluid">
           <div class="imgOverlay">
             <span class="imgText">Architecture</span>
@@ -175,7 +175,7 @@
       </div>
 
       <div class="col-md-4 pr-md-5 pt-md-5 pb-3">
-        <div class="imgWrapper">
+        <div class="imgWrapper" onclick="showPictures(4, 'other');">
           <img src="../img/mainGallery/Other Square.jpg" class="galleryImg img-fluid">
           <div class="imgOverlay">
             <span class="imgText">Oth<br/>er</span>

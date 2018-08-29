@@ -93,6 +93,9 @@ html, body {
   font-weight: 300;
   font-size: 0.75em;
   border: 2px solid rgb(51, 51, 51);
+  /* border: 0;
+  border-right: 2px solid rgb(51, 51, 51);
+  border-bottom: 2px solid rgb(51, 51, 51); */
   padding: 5px 15px;
   border-radius: 3px;
   letter-spacing: 3px;
