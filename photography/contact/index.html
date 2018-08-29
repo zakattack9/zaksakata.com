@@ -16,9 +16,11 @@
   <script defer src="../libs/js/all.min.js"></script>
   <!-- Animate on Scroll CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <!-- TwentyTwenty Slider -->
+  <link rel="stylesheet" href="../libs/twentytwenty.css">
   <!-- Local CSS -->
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/contact.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/animations.css">
 
@@ -28,7 +30,6 @@
 </head>
 
 <body>
-
   <div id="overlay">
     <img src="../img/initials.png" id="initials">
 
@@ -38,20 +39,20 @@
       </a>
     </div>
 
-    <div class="overlayOpt activeOpt">
-      <a href="./">
+    <div class="overlayOpt">
+      <a href="../about">
         About
       </a>
     </div>
 
     <div class="overlayOpt">
-      <a href="../gallery/">
+      <a href="../gallery">
         Gallery
       </a>
     </div>
 
     <div class="overlayOpt">
-      <a href="../presets/">
+      <a href="../presets">
         Presets
       </a>
     </div>
@@ -65,14 +66,13 @@
       </a>
     </div>
 
-    <div class="overlayOpt">
-      <a href="../contact/">
+    <div class="overlayOpt activeOpt">
+      <a href="./">
         Contact
       </a>
     </div>
 
   </div>
-
 
   <div class="positionBtn">
     <div class="overlayClose" id="sideMenu">
@@ -82,46 +82,67 @@
     </div>
   </div>
 
-  <div id="textBkg">
-    Zak
-  </div>
+  <div class="row h-100 pl-md-5">
+    <div class="col-4 offset-4 my-auto">
+      <div id="socialWrap">
+        <span class="iconSize">
+          <i class="fab fa-linkedin-in"></i>
+        </span>
+        <br/>
+        <span class="iconSize">
+          <i class="fab fa-instagram"></i>
+        </span>
+        <br/>
+        <span class="iconSize">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <br/>
+        <span class="iconSize">
+          <i class="fas fa-envelope-open"></i>
+        </span>
+      </div>
 
-  <div class="row no-gutters h-100">
-    <div class="colWrapper my-auto">
-      <div class="row no-gutters">
-        <div class="col-2 offset-3">
-          <img src="../img/zak.jpg" class="img-fluid" id="aboutBkg">
-          <div class="mt-2" id="socialWrap">
-            <span class="iconSize mx-2">
-              <i class="fab fa-linkedin-in"></i>
-            </span>
-        
-            <span class="iconSize mx-2">
-              <i class="fab fa-instagram"></i>
-            </span>
-        
-            <span class="iconSize mx-2">
-              <i class="fab fa-twitter"></i>
-            </span>
-        
-            <span class="iconSize mx-2">
-              <i class="fas fa-envelope-open"></i>
-            </span>
+      <div class="row no-gutters" id="hideSubmit">
+        <div class="col-12 mb-3" id="contactTitle">contact</div>
+        <div class="col-6 my-2 pr-2">
+          <input type="text" name="name" placeholder="name" class="contactInput" id="nameInp">
+        </div>
+
+        <div class="col-6 my-2 pl-2">
+          <input type="text" name="email" placeholder="email" class="contactInput" id="emailInp">
+        </div>
+
+        <div class="col-12 my-2">
+          <input type="text" name="subject" placeholder="subject" class="contactInput" id="subjectInp">
+        </div>
+
+        <div class="col-12 my-2">
+          <textarea name="message" placeholder="message" class="contactInput" id="msgInp"></textarea>
+        </div>
+
+        <div class="col-12 my-1 mb-5 pb-3">
+          <div class="visitSite" id="send">
+            Send
+          </div>
+
+          <div id="errorMsg">
+
           </div>
         </div>
-        <div class="col-4 pl-4 my-auto">
-          <div id="aboutTitle">About Me</div>
-          <hr>
-          <div id="aboutText">
-            Growing up in Hawaii, I always enjoyed capturing vibrant scenery popping with color. From sunsets to cities, it has always been an adventure exploring new types of photography and capturing fleeting moments.
-            <br/>
-            <br/>
-            Taking pictures on trips and editing photos when time allowed, I've always considered photography a side passion of mines. With inspiration from other fellow photographers, I love composing pictures with interesting subjects that pop with color.
-            <br/>
-            <br/>
-            My gallery of photographs has become a visual representation of personal progress, improving with every adjustment and click of a shutter.
-          </div>
-        </div>
+      </div>
+
+      <div class="description" id="showSubmit">
+        <span id="successIcon">
+          <i class="fas fa-check"></i>
+        </span>
+        <br> Success! We'll be in touch soon!
+      </div>
+
+      <div class="description" id="showFail">
+        <span id="failIcon">
+          <i class="fas fa-times"></i>
+        </span>
+        <br> Something went wrong, please email me at sakata.zak@gmail.com
       </div>
     </div>
   </div>
@@ -139,9 +160,12 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <!-- Masonry JS -->
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <!-- TwentyTwenty Slider -->
+  <script src="../libs/jquery.event.move.js"></script>
+  <script src="../libs/jquery.twentytwenty.js"></script>
   <!-- Local JS -->
   <script src="../js/overlay.js"></script>
-
+  <script src="../js/contact.js"></script>
 </body>
 
 </html>
