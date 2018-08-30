@@ -1,3 +1,4 @@
+const PHOTO_NAMES = ['japan', 'arizona', 'smoke', 'architecture', 'other']; //must be in same order as PHOTO_DATA array (for "all" pictures gallery)
 const PHOTO_DATA = [
   [
     //"japan",
@@ -599,12 +600,6 @@ const PHOTO_DATA = [
       date: "10-2017"
     },
     {
-      id: 32,
-      img: "SB32.jpg",
-      location: "Kunia, Hawaii",
-      date: "10-2017"
-    },
-    {
       id: 33,
       img: "SB33.jpg",
       location: "Kunia, Hawaii",
@@ -693,6 +688,12 @@ const PHOTO_DATA = [
       img: "SB47.jpg",
       location: "Kunia, Hawaii",
       date: "10-2017"
+    },
+    {
+      id: 48,
+      img: "SB48.jpg",
+      location: "Kunia, Hawaii",
+      date: "11-2017"
     },
   ],
 
@@ -902,7 +903,7 @@ const PHOTO_DATA = [
     {
       id: 21,
       img: "21.jpg",
-      location: "UDUB",
+      location: "Seattle",
       date: "12-2017"
     },
     {
@@ -940,6 +941,42 @@ const PHOTO_DATA = [
       img: "27.jpg",
       location: "UDUB",
       date: "12-2017"
+    },
+    {
+      id: 28,
+      img: "28.jpg",
+      location: "Kunia, Hawaii",
+      date: "10-2017"
+    },
+    {
+      id: 29,
+      img: "29.jpg",
+      location: "Moanalua, Hawaii",
+      date: "11-2014"
+    },
+    {
+      id: 30,
+      img: "30.jpg",
+      location: "Hawaii",
+      date: "08-2015"
+    },
+    {
+      id: 31,
+      img: "31.jpg",
+      location: "Hawaii",
+      date: "03-2015"
+    },
+    {
+      id: 32,
+      img: "32.jpg",
+      location: "Hawaii",
+      date: "07-2017"
+    },
+    {
+      id: 33,
+      img: "33.jpg",
+      location: "Seattle",
+      date: "12-2018"
     },
   ]
 ]

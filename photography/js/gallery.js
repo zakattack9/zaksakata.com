@@ -54,21 +54,93 @@ function showPictures(category, folder) {
   clonedAnim[0].style.display = "block";
 
   let appendImgs = ``;
-  shuffle(PHOTO_DATA[category]);
-  PHOTO_DATA[category].map((currVal) => {
-    //console.log(currVal);
-    appendImgs += `
-    <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
-      <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
+  if (category === 'all') {
+    let allImgs = [];
 
-      <span class="imgData">
-        Location: ${currVal.location}<br/>
-        Date: ${currVal.date}<br/><br/>
-        <span style="font-style: italic">${currVal.id}/${PHOTO_DATA[category].length}</span>
-      </span>
-    </div>
-    `;
-  })
+    PHOTO_DATA.map((currVal, index) => {
+      currVal.map((currVal) => {
+        allImgs.push([currVal, PHOTO_NAMES[index], index]);
+      });
+    });
+
+    shuffle(allImgs);
+    allImgs.map((currVal) => {
+      appendImgs += `
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
+        <img class="img-fluid singleImg" src="../img/${currVal[1]}/${currVal[0].img}">
+  
+        <span class="vidData">
+        </span>
+
+        <span class="imgData">
+          Location: ${currVal[0].location}<br/>
+          Date: ${currVal[0].date}<br/><br/>
+          <span style="font-style: italic">${currVal[0].id}/${PHOTO_DATA[currVal[2]].length}</span>
+        </span>
+      </div>
+      `;
+    });
+
+  } else if (folder === 'smoke') {
+    shuffle(PHOTO_DATA[category]);
+    PHOTO_DATA[category].map((currVal) => {
+      if ([2, 3, 5, 9, 12, 15, 16, 17, 27, 28, 29, 33, 43, 46].indexOf(currVal.id) > -1) {
+        appendImgs += `
+        <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
+          <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
+
+          <span class="vidData">
+            <video muted loop class="animSmoke pt-5">
+              <source src="../img/smokeAnimated/${currVal.id}.mp4" type="video/mp4">
+            </video>
+          </span>
+
+          <span class="imgData">
+            <div class="animateBtn mb-3">Animate!</div><br/>
+            Location: ${currVal.location}<br/>
+            Date: ${currVal.date}<br/><br/>
+            <span style="font-style: italic">${currVal.id}/${PHOTO_DATA[category].length}</span>
+          </span>
+        </div>
+        `;
+      } else {
+        appendImgs += `
+        <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
+          <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
+  
+          <span class="vidData">
+          </span>
+
+          <span class="imgData">
+            Location: ${currVal.location}<br/>
+            Date: ${currVal.date}<br/><br/>
+            <span style="font-style: italic"><span class="checkId">${currVal.id}</span>/${PHOTO_DATA[category].length}</span>
+          </span>
+        </div>
+        `; 
+      }
+
+    })
+  } else {
+    shuffle(PHOTO_DATA[category]);
+    PHOTO_DATA[category].map((currVal) => {
+      appendImgs += `
+      <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
+        <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
+  
+        <span class="vidData">
+        </span>
+
+        <span class="imgData">
+          Location: ${currVal.location}<br/>
+          Date: ${currVal.date}<br/><br/>
+          <span style="font-style: italic">${currVal.id}/${PHOTO_DATA[category].length}</span>
+        </span>
+      </div>
+      `;
+    })
+  
+  }
 
   let photoLayout =
     `
@@ -126,8 +198,9 @@ $(window).on('popstate', function (e) {
 $(document).on('click', '.singleImg', (e) => {
   let currImg = e.target;
   let currImgData = $(currImg).siblings('.imgData')[0].innerHTML;
+  let currVid = $(currImg).siblings('.vidData')[0].innerHTML;
+
   $('#imgPopup').empty();
-  //console.log($(currImg).siblings('.imgData')[0].innerHTML);
   $('#imgPopup')[0].style.display = "block";
 
   $('#imgPopup').append(`
@@ -138,6 +211,7 @@ $(document).on('click', '.singleImg', (e) => {
       <div class="col-9 pb-5 pr-5 h-100 align-self-end">
         <div id="closePop">close</div>
         <img src="${currImg.src}" class="popImg pt-5">
+        ${currVid}
       </div>
     </div>
   `)
@@ -145,4 +219,13 @@ $(document).on('click', '.singleImg', (e) => {
 
 $(document).on('click', '#closePop', () => {
   $('#imgPopup')[0].style.display = "none";
+})
+
+$(document).on('click', '.animateBtn', (e) => {
+  let findVid = $(e.target).closest('.row').find('.animSmoke')[0];
+  let findImg = $(e.target).closest('.row').find('.popImg')[0];
+  
+  findImg.style.display = "none";
+  findVid.style.display = "block";
+  findVid.play();
 })
