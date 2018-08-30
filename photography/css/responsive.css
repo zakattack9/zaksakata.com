@@ -3,6 +3,27 @@
     height: 100%;
     width: auto;
   }
+
+  #homeText {
+    font-size: 3em;
+    line-height: 1.4em;
+  }
+  
+  .homeSubTxt {
+    font-size: 0.5em;
+    line-height: 0em;
+  }
+
+  #overlay {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* right: -40%; */
+    height: 100%;
+    width: 0%;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 576px) { 
@@ -19,6 +40,15 @@
   #homeVideo {
     height: auto;
     width: 100%;
+  }
+
+  #homeText {
+    font-size: 5em;
+    line-height: 1em;
+  }
+  
+  .homeSubTxt {
+    line-height: unset;
   }
 }
 
