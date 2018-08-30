@@ -202,3 +202,41 @@ html, body {
   background-color: rgb(51, 51, 51);
   color: white;
 }
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 75%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 75%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.vidTitle {
+  font-weight: 300;
+  text-transform: lowercase;
+  font-size: 3em;
+  line-height: 0.8em;
+  letter-spacing: 1px;
+  /* font-family: glossbloom;
+  font-size: 2.5em; */
+  color: rgb(51, 51, 51);
+}
+
+hr {
+  display: block;
+  border-top: 1px solid rgb(197, 197, 197);
+}
+
+.vidInfo {
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+
+}

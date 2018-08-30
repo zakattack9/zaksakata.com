@@ -20,6 +20,10 @@ AOS.init({
 history.pushState({ selectedFolder: 'gallery' }, 'newtitle', `/photography/gallery/`);
 
 $('#imgPopup')[0].style.paddingTop = $('#galleryHeader').height() + 'px';
+$('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height()/2 + 'px';
+window.onresize = () => {
+  $('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height()/2 + 'px';
+}
 
 $('#gallerySub').on('click', () => {
   window.location = "../gallery/";
@@ -229,3 +233,129 @@ $(document).on('click', '.animateBtn', (e) => {
   findVid.style.display = "block";
   findVid.play();
 })
+
+function showVideos() {
+  location.hash = `videos/`;
+
+  $('#imgPopup')[0].style.display = "none"; //closes image popup
+  $('#galleryMain').empty();
+  let clonedAnim = $('#loadingAnim').clone();
+  $('#galleryMain').append(clonedAnim);
+  clonedAnim[0].style.display = "block";
+
+  let videoLayout = `
+  <div class="row">
+    <div class="col-6 pt-5">
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/A1pzuN1zAPc" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-6 pr-md-5 pt-5 align-self-center">
+      <div class="vidTitle">Kona x Hilo</div>
+      <hr>
+      <div class="vidInfo">
+        location: Hilo/Kona, Hawaii
+        <br/>
+        date: 07-2017
+      </div>
+    </div>
+
+    <div class="col-6 pb-3">
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/T4Kyx4fLWmE" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-6 pr-md-5 align-self-center">
+      <div class="vidTitle">North Shore</div>
+      <hr>
+      <div class="vidInfo">
+        location: Waimea Bay, Hawaii
+        <br/>
+        date: 08-2017
+      </div>
+    </div>
+
+    <div class="col-6 pb-3">
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/ZrSAwheZXFI" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-6 pr-md-5 align-self-center">
+      <div class="vidTitle">Makapu'u</div>
+      <hr>
+      <div class="vidInfo">
+        location: Makapu'u/Alan Davis, Hawaii
+        <br/>
+        date: 08-2017
+      </div>
+    </div>
+
+    <div class="col-6 pb-3">
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/xoa0R7lAXbQ" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-6 pr-md-5 align-self-center">
+      <div class="vidTitle">Summer 2k17</div>
+      <hr>
+      <div class="vidInfo">
+        location: Hawaii
+        <br/>
+        date: 08-2017
+      </div>
+    </div>
+
+    <div class="col-6 pb-3">
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/LlkKIThaIm0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-6 pr-md-5 align-self-center">
+      <div class="vidTitle">Barbers Point</div>
+      <hr>
+      <div class="vidInfo">
+        location: Hawaii
+        <br/>
+        date: 08-2017
+      </div>
+    </div>
+
+    <div class="col-6 pb-3">
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/xgE8mtRsNDg" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-6 pr-md-5 align-self-center">
+      <div class="vidTitle">Smoke Bombs</div>
+      <hr>
+      <div class="vidInfo">
+        location: Hawaii
+        <br/>
+        date: 02-2018
+      </div>
+    </div>
+
+    <div class="col-6 pb-3">
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/uDKTwVzkKvM" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-6 pr-md-5 align-self-center">
+      <div class="vidTitle">Wailuna</div>
+      <hr>
+      <div class="vidInfo">
+        location: Hawaii
+        <br/>
+        date: 07-2017
+      </div>
+    </div>
+
+  </div>
+  `
+
+  $('#galleryMain').append(videoLayout);
+  $('#galleryMain .row').hide().delay(500).fadeIn(1000);
+  setTimeout(() => {
+    clonedAnim[0].style.display = "none";
+  }, 500)
+}
