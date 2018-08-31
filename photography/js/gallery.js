@@ -20,9 +20,9 @@ AOS.init({
 history.pushState({ selectedFolder: 'gallery' }, 'newtitle', `/photography/gallery/`);
 
 $('#imgPopup')[0].style.paddingTop = $('#galleryHeader').height() + 'px';
-$('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height()/2 + 'px';
+$('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height() / 2 + 'px';
 window.onresize = () => {
-  $('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height()/2 + 'px';
+  $('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height() / 2 + 'px';
 }
 
 $('#gallerySub').on('click', () => {
@@ -121,15 +121,15 @@ function showPictures(category, folder) {
             <span style="font-style: italic"><span class="checkId">${currVal.id}</span>/${PHOTO_DATA[category].length}</span>
           </span>
         </div>
-        `; 
+        `;
       }
 
     })
   } else {
     shuffle(PHOTO_DATA[category]);
-    PHOTO_DATA[category].map((currVal) => {
+    PHOTO_DATA[category].map((currVal, index) => {
       appendImgs += `
-      <div class="col-md-4 pr-md-5 pt-md-5 pb-3 grid-item">
+      <div class="grid-item col-md-4 pr-md-5 pt-md-5 pb-3">
         <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
   
         <span class="vidData">
@@ -143,34 +143,45 @@ function showPictures(category, folder) {
       </div>
       `;
     })
-  
+
   }
 
   let photoLayout =
     `
   <div class="row pt-2 pb-5">
     <div class="col-lg-12">
-      <div class="gallery-wrapper clearfix">
+      <div class="grid gallery-wrapper clearfix"">
         <div class="col-md-4 grid-sizer"></div>
-
         ${appendImgs}
+
       </div>
     </div>
   </div>
   `
 
   $('#galleryMain').append(photoLayout);
-  $('#galleryMain .row').hide().delay(1500).fadeIn(1500);
+  $('#galleryMain .row').hide().fadeIn(1500);
+  var $grid = $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true,
+  });
 
-  setTimeout(() => {
-    $('.gallery-wrapper').masonry({
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true,
-      transitionDuration: 0,
-    });
+  $grid.imagesLoaded( function() {
     clonedAnim[0].style.display = "none";
-  }, 1500); //need to change timeout for more pictures
+    $grid.masonry();
+    // $('#galleryMain .row').fadeIn(1500);
+  });
+
+  // setTimeout(() => {
+  //   $('.gallery-wrapper').masonry({
+  //     itemSelector: '.grid-item',
+  //     columnWidth: '.grid-sizer',
+  //     percentPosition: true,
+  //     transitionDuration: 0,
+  //   });
+  //   clonedAnim[0].style.display = "none";
+  // }, 1500); //need to change timeout for more pictures
 
 }
 
@@ -228,7 +239,7 @@ $(document).on('click', '#closePop', () => {
 $(document).on('click', '.animateBtn', (e) => {
   let findVid = $(e.target).closest('.row').find('.animSmoke')[0];
   let findImg = $(e.target).closest('.row').find('.popImg')[0];
-  
+
   findImg.style.display = "none";
   findVid.style.display = "block";
   findVid.play();
