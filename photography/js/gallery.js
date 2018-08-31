@@ -94,7 +94,7 @@ function showPictures(category, folder) {
           <img class="img-fluid singleImg" src="../img/${folder}/${currVal.img}">
 
           <span class="vidData">
-            <video muted loop class="animSmoke pt-5">
+            <video muted loop class="animSmoke pt-0 pt-md-5">
               <source src="../img/smokeAnimated/${currVal.id}.mp4" type="video/mp4">
             </video>
           </span>
@@ -161,6 +161,7 @@ function showPictures(category, folder) {
 
   $('#galleryMain').append(photoLayout);
   $('#galleryMain .row').hide().fadeIn(1500);
+  $('#blurImgs')[0].style.display = 'block';
   var $grid = $('.grid').masonry({
     itemSelector: '.grid-item',
     columnWidth: '.grid-sizer',
@@ -171,6 +172,7 @@ function showPictures(category, folder) {
     clonedAnim[0].style.display = "none";
     $grid.masonry();
     // $('#galleryMain .row').fadeIn(1500);
+    $('#blurImgs')[0].style.display = "none";
   });
 
   // setTimeout(() => {
@@ -261,12 +263,12 @@ function showVideos() {
 
   let videoLayout = `
   <div class="row">
-    <div class="col-6 pt-5">
+    <div class="col-md-6 pt-3 pt-md-5">
       <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/A1pzuN1zAPc" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-6 pr-md-5 pt-5 align-self-center">
+    <div class="col-md-6 pb-4 pb-md-0 pr-md-5 pt-md-5 align-self-center">
       <div class="vidTitle">Kona x Hilo</div>
       <hr>
       <div class="vidInfo">
@@ -276,12 +278,12 @@ function showVideos() {
       </div>
     </div>
 
-    <div class="col-6 pb-3">
+    <div class="col-md-6 pb-md-3">
       <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/T4Kyx4fLWmE" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-6 pr-md-5 align-self-center">
+    <div class="col-md-6 pb-4 pb-md-0 pr-md-5 align-self-center">
       <div class="vidTitle">North Shore</div>
       <hr>
       <div class="vidInfo">
@@ -291,12 +293,12 @@ function showVideos() {
       </div>
     </div>
 
-    <div class="col-6 pb-3">
+    <div class="col-md-6 pb-md-3">
       <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/ZrSAwheZXFI" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-6 pr-md-5 align-self-center">
+    <div class="col-md-6 pb-4 pb-md-0 pr-md-5 align-self-center">
       <div class="vidTitle">Makapu'u</div>
       <hr>
       <div class="vidInfo">
@@ -306,12 +308,12 @@ function showVideos() {
       </div>
     </div>
 
-    <div class="col-6 pb-3">
+    <div class="col-md-6 pb-md-3">
       <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/xoa0R7lAXbQ" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-6 pr-md-5 align-self-center">
+    <div class="col-md-6 pb-4 pb-md-0 pr-md-5 align-self-center">
       <div class="vidTitle">Summer 2k17</div>
       <hr>
       <div class="vidInfo">
@@ -321,12 +323,12 @@ function showVideos() {
       </div>
     </div>
 
-    <div class="col-6 pb-3">
+    <div class="col-md-6 pb-md-3">
       <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/LlkKIThaIm0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-6 pr-md-5 align-self-center">
+    <div class="col-md-6 pb-4 pb-md-0 pr-md-5 align-self-center">
       <div class="vidTitle">Barbers Point</div>
       <hr>
       <div class="vidInfo">
@@ -336,12 +338,12 @@ function showVideos() {
       </div>
     </div>
 
-    <div class="col-6 pb-3">
+    <div class="col-md-6 pb-md-3">
       <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/xgE8mtRsNDg" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-6 pr-md-5 align-self-center">
+    <div class="col-md-6 pb-4 pb-md-0 pr-md-5 align-self-center">
       <div class="vidTitle">Smoke Bombs</div>
       <hr>
       <div class="vidInfo">
@@ -351,12 +353,12 @@ function showVideos() {
       </div>
     </div>
 
-    <div class="col-6 pb-3">
+    <div class="col-md-6 pb-md-3">
       <div class="iframe-container">
         <iframe src="https://www.youtube.com/embed/uDKTwVzkKvM" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-6 pr-md-5 align-self-center">
+    <div class="col-md-6 pb-4 pb-md-0 pr-md-5 align-self-center">
       <div class="vidTitle">Wailuna</div>
       <hr>
       <div class="vidInfo">

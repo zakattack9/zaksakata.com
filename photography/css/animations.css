@@ -31,7 +31,7 @@
   right: 0;
   top: 40%;
   transform: translateY(-100%);
-  z-index: 1;
+  z-index: 6;
 }
 
 .sk-cube-grid .sk-cube {

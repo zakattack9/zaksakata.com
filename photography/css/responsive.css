@@ -65,6 +65,11 @@
     height: auto;
   }
 
+  .iframe-container iframe {
+    top: unset;
+    bottom: 20px;
+  }
+
   /* Contact Styles */
   #socialWrap {
     display: none;
@@ -155,6 +160,11 @@
 
   #fullImgHeight {
     height: 100%;
+  }
+
+  .iframe-container iframe {
+    top: 0;
+    bottom: unset;
   }
 
   /* Contact Styles */
