@@ -183,6 +183,11 @@ function showPictures(category, folder) {
   //   clonedAnim[0].style.display = "none";
   // }, 1500); //need to change timeout for more pictures
 
+  if (window.matchMedia("(min-width: 992px)").matches) {
+    $('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height() / 2 + 'px';
+  } else if (window.matchMedia("(min-width: 0px)").matches) {
+    $('#galleryMain')[0].style.paddingTop = $('#galleryHeader').height() / 1.3 + 'px';
+  }
 }
 
 //allows user to use back button; also changes URL
@@ -220,12 +225,12 @@ $(document).on('click', '.singleImg', (e) => {
 
   $('#imgPopup').append(`
     <div class="row h-100">
-      <div class="col-3 pb-5 align-self-end text-right imgCaption">
+      <div class="col-12 col-md-3 pt-2 pt-md-0 pb-5 align-self-end text-right order-12 order-md-1 imgCaption">
         ${currImgData}
       </div>
-      <div class="col-9 pb-5 pr-5 h-100 align-self-end">
+      <div class="col-12 col-md-9 pb-md-5 pr-md-5 align-self-end order-1 order-md-12" id="fullImgHeight">
         <div id="closePop">close</div>
-        <img src="${currImg.src}" class="popImg pt-5">
+        <img src="${currImg.src}" class="popImg pt-md-5">
         ${currVid}
       </div>
     </div>
