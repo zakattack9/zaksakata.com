@@ -350,6 +350,60 @@ const PHOTO_DATA = [
       location: "Senso-Ji Temple",
       date: "06-2018"
     },
+    {
+      id: 59,
+      img: "59.jpg",
+      location: "Nezu Shrine",
+      date: "06-2018"
+    },
+    {
+      id: 60,
+      img: "60.jpg",
+      location: "Nezu Shrine",
+      date: "06-2018"
+    },
+    {
+      id: 61,
+      img: "61.jpg",
+      location: "Nezu Shrine",
+      date: "06-2018"
+    },
+    {
+      id: 62,
+      img: "62.jpg",
+      location: "Ueno",
+      date: "06-2018"
+    },
+    {
+      id: 63,
+      img: "63.jpg",
+      location: "Odaiba",
+      date: "06-2018"
+    },
+    {
+      id: 64,
+      img: "64.jpg",
+      location: "Yokohama",
+      date: "06-2018"
+    },
+    {
+      id: 65,
+      img: "65.jpg",
+      location: "Yokohama",
+      date: "06-2018"
+    },
+    {
+      id: 66,
+      img: "66.jpg",
+      location: "Senso-Ji Temple",
+      date: "06-2018"
+    },
+    {
+      id: 67,
+      img: "67.jpg",
+      location: "Senso-Ji Temple",
+      date: "06-2018"
+    },
 
   ],
 
@@ -774,6 +828,42 @@ const PHOTO_DATA = [
     {
       id: 13,
       img: "A13.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 14,
+      img: "A14.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 15,
+      img: "A15.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 16,
+      img: "A16.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 17,
+      img: "A17.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 18,
+      img: "A18.jpg",
+      location: "Tokyo",
+      date: "06-2018"
+    },
+    {
+      id: 19,
+      img: "A19.jpg",
       location: "Tokyo",
       date: "06-2018"
     },
