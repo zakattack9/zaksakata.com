@@ -18,6 +18,7 @@ font-family: "Helvetica Neue", sans-serif;
 html, body {
   width: 100%;
   height: 100%;
+  cursor: default !important;
 }
 
 #fp-nav, .fp-nav {
@@ -26,7 +27,13 @@ html, body {
 
 #fp-nav ul li a span { /*edits the navigation bar for fullpage*/
   background: rgb(95, 98, 128);
+  transition: 0.4s;
 }
+
+/* .whiteSide {
+  background: rgb(241, 240, 233) !important;
+  border-color: rgb(241, 240, 233) !important;
+} */
 
 #fullpage { /*disables horizontal scrollbar from appearing when using any parallax effect*/
   overflow-x: hidden;
@@ -96,13 +103,13 @@ a:hover {
 }
 
 #overlayOptions li {
-  color: rgb(132, 134, 168);
+  color: rgb(99, 100, 131);
   height: 38px; 
   transition: 0.2s;
 }
 
 #overlayOptions li:hover {
-  color: rgb(92, 94, 124);
+  color: rgb(68, 69, 92);
   transition: 0.2s;
 }
 
@@ -380,6 +387,7 @@ a:hover {
   font-size: 5em;
   line-height: 1em;
   color: rgb(52, 54, 75);
+  cursor: default;
 }
 
 .subTitle {
@@ -395,6 +403,7 @@ a:hover {
   color: rgb(89, 91, 119);
   line-height: 1.2em;
   letter-spacing: 1px;
+  cursor: default;
 }
 
 .description { /*standard for all descriptions*/
@@ -899,6 +908,14 @@ a:hover {
   text-transform: none;
 }
 
+#dwnldResume {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+  text-transform: none;
+}
+
 .inputField {
   width: 100%;
   font-family: "Helvetica Neue", sans-serif;
@@ -947,6 +964,7 @@ a:hover {
   position: absolute;
   right: 0;
   transition: 0.4s;
+  cursor: default;
 }
 
 #send:hover {
@@ -961,6 +979,7 @@ a:hover {
   width: 45%;
   display: block;
   margin: 0 auto;
+  cursor: default;
 }
 
 .contactIcon {
@@ -968,6 +987,7 @@ a:hover {
   margin-left: 2.5%;
   margin-right: 2.5%;
   transition: 0.2s;
+  cursor: default;
 }
 
 .contactIcon:hover {
