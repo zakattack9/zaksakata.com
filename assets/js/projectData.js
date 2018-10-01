@@ -5,7 +5,7 @@ const projects = [
     title: "Lanakila Meals on Wheels",
     subTitle: "High School Capstone Project",
     role: "Project Manager",
-    techStack: "AWS, JS, HTML, CSS",
+    techStack: "AWS, JS, HTML, CSS, PostgreSQL",
     description: "Lanakila Meals on Wheels is an elderly meal service that asked us to create an application which would provide them with a better system of communication. With our app, Lanakila can create groups and add subscribers to these groups; they can then create messages that are broadcasted to those groups through various mediums simultaneously with the push of a button.",
     imageUrls: [
       "./assets/img/projects/lanakila1.png",
