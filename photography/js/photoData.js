@@ -457,6 +457,44 @@ const PHOTO_DATA = [
       location: "Chapel Of The Holy Cross",
       date: "07-2018"
     },
+    {
+      id: 9,
+      img: "AZ9.jpg",
+      location: "Papago Park",
+      date: "10-2018"
+    },
+    {
+      id: 10,
+      img: "AZ10.jpg",
+      location: "Papago Park",
+      date: "10-2018"
+    },
+    {
+      id: 11,
+      img: "AZ11.jpg",
+      location: "Papago Park",
+      date: "10-2018"
+    },{
+      id: 12,
+      img: "AZ12.jpg",
+      location: "Papago Park",
+      date: "10-2018"
+    },{
+      id: 13,
+      img: "AZ13.jpg",
+      location: "Papago Park",
+      date: "10-2018"
+    },{
+      id: 14,
+      img: "AZ14.jpg",
+      location: "Papago Park",
+      date: "10-2018"
+    },{
+      id: 15,
+      img: "AZ15.jpg",
+      location: "Papago Park",
+      date: "10-2018"
+    },
   ],
 
   [
