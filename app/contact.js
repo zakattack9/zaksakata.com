@@ -11,7 +11,7 @@ module.exports.sendInfo = (event, context, callback) => {
   console.log("hello", event.body);
   let { name, email, subject, message } = JSON.parse(event.body);
   console.log(name, email, subject, message);
-  
+
   let topicARN = process.env.ARN; //environmental variable with ARN
   console.log(topicARN);
 
@@ -90,7 +90,6 @@ module.exports.sendInfo = (event, context, callback) => {
       })
 
     } else {
-      
       let snsParams = {
         Message:
           `
